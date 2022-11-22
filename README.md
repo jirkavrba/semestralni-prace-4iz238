@@ -10,6 +10,6 @@ Každý balíček obsahuje agregované informace o obsažených kartách, název
 
 Každá karta má definované vlastnosti podle toho, o jakou kartu se jedná. 
 
-U všech karet se uvádí typ, název, text, barva, obrázek, autor obrázku, legalita karty (jestli je možné kartu hrát v různých formátech MtG) a edice ve které byla karta vydána.
+U všech karet se uvádí typ, název, text, barva, rarita, obrázek, autor obrázku, legalita karty (jestli je možné kartu hrát v různých formátech MtG) a edice ve které byla karta vydána.
 
 U některých dalších typů jsou pak vedeny další atributy viz ukázkový dokument.
