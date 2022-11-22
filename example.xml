@@ -29,16 +29,471 @@
             </game>
         </stats>
         <cards>
-            <card count="2">
+            <card count="1">
                 <name>Elvish Warmaster</name>
-                <text>
-                </text>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
                 <cost>
                     <colorless>1</colorless>
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
-                <subtype>Elf Warior</subtype>
+                <subtype>Elf Warrior</subtype>
+                <power>2</power>
+                <toughness>2</toughness>
+                <text>Whenever one or more other Elves enter the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn. {5}{G}{G}: Elves you control get +2/+2 and gain deathtouch until end of turn.></text>
+                <set>khm</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Alexander Mokhov</artist>
+            </card>
+            <card count="2">
+                <name>Imperious Perfect</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>2</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Warrior</subtype>
+                <power>2</power>
+                <toughness>2</toughness>
+                <text>Other Elves you control get +1/+1. {G}, {T}: Create a 1/1 green Elf Warrior creature token.></text>
+                <set>khc</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>penny</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Scott M. Fischer</artist>
+            </card>
+            <card count="2">
+                <name>Fierce Empath</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Common</rarity>
+                <cost>
+                    <colorless>2</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>When Fierce Empath enters the battlefield, you may search your library for a creature card with mana value 6 or greater, reveal it, put it into your hand, then shuffle.></text>
+                <set>2xm</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>pauper</format>
+                    <format>vintage</format>
+                    <format>penny</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>paupercommander</format>
+                    <format>duel</format>
+                    <format>premodern</format>
+                </legality>
+                <artist>Johann Bodin</artist>
+            </card>
+            <card count="2">
+                <name>Realmwalker</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>2</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Shapeshifter</subtype>
+                <power>2</power>
+                <toughness>3</toughness>
+                <text>Changeling (This card is every creature type.) As Realmwalker enters the battlefield, choose a creature type.
+You may look at the top card of your library any time.
+You may cast creature spells of the chosen type from the top of your library.></text>
+                <set>khm</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Zack Stella</artist>
+            </card>
+            <card count="2">
+                <name>Craterhoof Behemoth</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Mythic</rarity>
+                <cost>
+                    <colorless>5</colorless>
+                    <green>3</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Beast</subtype>
+                <power>5</power>
+                <toughness>5</toughness>
+                <text>Haste When Craterhoof Behemoth enters the battlefield, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.></text>
+                <set>jmp</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Chris Rahn</artist>
+            </card>
+            <card count="3">
+                <name>Marwyn, the Nurturer</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>2</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Legendary Creature</type>
+                <subtype>Elf Druid</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>Whenever another Elf enters the battlefield under your control, put a +1/+1 counter on Marwyn, the Nurturer. {T}: Add an amount of {G} equal to Marwyn's power.></text>
+                <set>khc</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>penny</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Chris Rahn</artist>
+            </card>
+            <card count="4">
+                <name>Allosaurus Shepherd</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Mythic</rarity>
+                <cost>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Shaman</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>This spell can't be countered. Green spells you control can't be countered.
+{4}{G}{G}: Until end of turn, each Elf creature you control has base power and toughness 5/5 and becomes a Dinosaur in addition to its other creature types.></text>
+                <set>2x2</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Randy Vargas</artist>
+            </card>
+            <card count="4">
+                <name>Jaspera Sentinel</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Common</rarity>
+                <cost>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Rogue</subtype>
+                <power>1</power>
+                <toughness>2</toughness>
+                <text>Reach {T}, Tap an untapped creature you control: Add one mana of any color.></text>
+                <set>khm</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>pauper</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>paupercommander</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Raoul Vitale</artist>
+            </card>
+            <card count="4">
+                <name>Llanowar Elves</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Common</rarity>
+                <cost>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Druid</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>{T}: Add {G}.></text>
+                <set>gnt</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>pauper</format>
+                    <format>vintage</format>
+                    <format>penny</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>paupercommander</format>
+                    <format>duel</format>
+                    <format>premodern</format>
+                </legality>
+                <artist>Chris Rahn</artist>
+            </card>
+            <card count="4">
+                <name>Elvish Archdruid</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <green>2</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Druid</subtype>
+                <power>2</power>
+                <toughness>2</toughness>
+                <text>Other Elf creatures you control get +1/+1. {T}: Add {G} for each Elf you control.></text>
+                <set>khc</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>penny</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Raymond Swanland</artist>
+            </card>
+            <card count="4">
+                <name>Elvish Clancaller</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <green>2</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Druid</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>Other Elves you control get +1/+1. {4}{G}{G}, {T}: Search your library for a card named Elvish Clancaller, put it onto the battlefield, then shuffle.></text>
+                <set>m19</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Matt Stewart</artist>
+            </card>
+            <card count="4">
+                <name>Dwynen's Elite</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Uncommon</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Warrior</subtype>
+                <power>2</power>
+                <toughness>2</toughness>
+                <text>When Dwynen's Elite enters the battlefield, if you control another Elf, create a 1/1 green Elf Warrior creature token.></text>
+                <set>jmp</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Volkan Baǵa</artist>
+            </card>
+            <card count="4">
+                <name>Collected Company</name>
+                <colors>
+                    <color>Green</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>3</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Instant</type>
+                <text>Look at the top six cards of your library. Put up to two creature cards with mana value 3 or less from among them onto the battlefield. Put the rest on the bottom of your library in any order.></text>
+                <set>dtk</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Franz Vohwinkel</artist>
+            </card>
+            <card count="1">
+                <name>Khalni Garden</name>
+                <colors></colors>
+                <rarity>Common</rarity>
+                <cost></cost>
+                <type>Land</type>
+                <text>Khalni Garden enters the battlefield tapped. When Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.
+{T}: Add {G}.></text>
+                <set>c18</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>pauper</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>paupercommander</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Ryan Pancoast</artist>
+            </card>
+            <card count="3">
+                <name>Lair of the Hydra</name>
+                <colors></colors>
+                <rarity>Rare</rarity>
+                <cost></cost>
+                <type>Land</type>
+                <text>If you control two or more other lands, Lair of the Hydra enters the battlefield tapped. {T}: Add {G}.
+{X}{G}: Until end of turn, Lair of the Hydra becomes an X/X green Hydra creature. It's still a land. X can't be 0.></text>
+                <set>afr</set>
+                <legality>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>vintage</format>
+                    <format>commander</format>
+                    <format>historicbrawl</format>
+                    <format>duel</format>
+                </legality>
+                <artist>Johannes Voss</artist>
+            </card>
+            <card count="16">
+                <name>Forest</name>
+                <colors></colors>
+                <rarity>Common</rarity>
+                <cost></cost>
+                <type>Basic Land</type>
+                <subtype>Forest</subtype>
+                <text>({T}: Add {G}.)></text>
+                <set>bro</set>
+                <legality>
+                    <format>standard</format>
+                    <format>historic</format>
+                    <format>gladiator</format>
+                    <format>pioneer</format>
+                    <format>explorer</format>
+                    <format>modern</format>
+                    <format>legacy</format>
+                    <format>pauper</format>
+                    <format>vintage</format>
+                    <format>penny</format>
+                    <format>commander</format>
+                    <format>brawl</format>
+                    <format>historicbrawl</format>
+                    <format>alchemy</format>
+                    <format>paupercommander</format>
+                    <format>duel</format>
+                    <format>premodern</format>
+                </legality>
+                <artist>Jonas De Ro</artist>
             </card>
         </cards>
     </deck>

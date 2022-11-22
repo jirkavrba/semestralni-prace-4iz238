@@ -4,7 +4,8 @@ import fs from "https://deno.land/std@0.165.0/node/fs.ts";
 import process from "https://deno.land/std@0.165.0/node/process.ts";
 import { _format } from "https://deno.land/std@0.165.0/path/_util.ts";
 
-const capitalize = (input: string): string => input.charAt(0).toUpperCase() + input.slice(1);
+const capitalize = (input: string): string =>
+  input.charAt(0).toUpperCase() + input.slice(1);
 
 const source = fs.readFileSync("./deck.txt").toString();
 const parsed = source.split("\n")
@@ -86,9 +87,9 @@ const processCost = (source: string): string => {
 };
 
 const processType = (source: string): { type: string; subtype: string } => {
-  const [type, subtype] = (source + " — ").split("—").map((item) =>
-    item.trim()
-  );
+  const [type, subtype] = (source)
+    .split(" — ")
+    .map((item) => item.trim());
 
   return {
     type,
@@ -98,17 +99,17 @@ const processType = (source: string): { type: string; subtype: string } => {
 
 const processColors = (source: Array<Symbol>): string => {
   return source
-    .map(symbol => colors[symbol])
-    .map(color => `<color>${capitalize(color)}</color>`)
+    .map((symbol) => colors[symbol])
+    .map((color) => `<color>${capitalize(color)}</color>`)
     .join("\n");
-}
+};
 
 const processLegality = (source: Record<string, string>): string => {
   return Object.entries(source)
     .filter(([_format, legality]) => legality === "legal")
     .map(([format]) => `<format>${format}</format>`)
     .join("\n");
-}
+};
 
 const transformed = data.map((card) => {
   const cost = processCost(card.data.cost);
@@ -123,16 +124,16 @@ const transformed = data.map((card) => {
             <rarity>${capitalize(card.data.rarity)}</rarity>
             <cost>${cost}</cost>
             <type>${type}</type>
-            ${subtype && ("<subtype>" + subtype + "</subtype>")},
-            ${card.data.power && ("<power>" + card.data.power + "</power>")}
-            ${card.data.toughness && ("<toughness>" + card.data.toughness + "</toughness>")}
-            <text><![CDATA[${card.data.text}]]></text>
+            ${subtype !== undefined ? ("<subtype>" + subtype + "</subtype>") : ""}
+            ${card.data.power ? ("<power>" + card.data.power + "</power>") : ""}
+            ${card.data.toughness ? ("<toughness>" + card.data.toughness + "</toughness>") : ""}
+            <text>${card.data.text.replace("\n", " ")}></text>
             <set>${card.data.set}</set>
             <legality>${legality}</legality>
             <artist>${card.data.artist}</artist>
         </card>
     `;
 })
-  .join("\n");
+.join("\n");
 
 process.stdout.write(transformed);
