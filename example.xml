@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decks>
+    <deck>
+        <name>Emotional Damage</name>
+        <format>Historic</format>
+        <colors>
+            <color>Red</color>
+            <color>Green</color>
+        </colors>
+        <stats>
+            <cards>60</cards>
+            <rarity>
+                <common>27</common>
+                <uncommon>6</uncommon>
+                <rare>21</rare>
+                <mythic>6</mythic>
+            </rarity>
+            <mana>
+                <value cost="0">20</value>
+                <value cost="1">12</value>
+                <value cost="2">5</value>
+                <value cost="3">13</value>
+                <value cost="4">4</value>
+                <value cost="8">2</value>
+            </mana>
+            <game>
+                <wins>10</wins>
+                <loses>2</loses>
+            </game>
+        </stats>
+        <cards>
+            <!-- TODO -->
+        </cards>
+    </deck>
+</decks>
