@@ -29,7 +29,15 @@
             </game>
         </stats>
         <cards>
-            <!-- TODO -->
+            <card count="2">
+                <name>Elvish Warmaster</name>
+                <cost>
+                    <colorless>1</colorless>
+                    <green>1</green>
+                </cost>
+                <type>Creature</type>
+                <subtype>Elf Warior</subtype>
+            </card>
         </cards>
     </deck>
 </decks>
