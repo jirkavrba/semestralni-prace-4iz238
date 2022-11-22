@@ -31,6 +31,8 @@
         <cards>
             <card count="2">
                 <name>Elvish Warmaster</name>
+                <text>
+                </text>
                 <cost>
                     <colorless>1</colorless>
                     <green>1</green>
