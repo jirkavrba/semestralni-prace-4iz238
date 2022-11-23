@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<decks>
+<decks xmlns="urn:dev.vrba:xml:mtg">
     <deck>
         <name>Emotional Damage</name>
         <format>Historic</format>
@@ -8,28 +8,13 @@
             <color>Green</color>
         </colors>
         <stats>
-            <cards>60</cards>
-            <rarity>
-                <common>27</common>
-                <uncommon>6</uncommon>
-                <rare>21</rare>
-                <mythic>6</mythic>
-            </rarity>
-            <mana>
-                <value cost="0">20</value>
-                <value cost="1">12</value>
-                <value cost="2">5</value>
-                <value cost="3">13</value>
-                <value cost="4">4</value>
-                <value cost="8">2</value>
-            </mana>
             <game>
                 <wins>10</wins>
                 <loses>2</loses>
             </game>
         </stats>
         <cards>
-            <card count="1">
+            <card count="1" id="bda83ef4-e345-495d-878c-4da171f997ba">
                 <name>Elvish Warmaster</name>
                 <colors>
                     <color>Green</color>
@@ -40,6 +25,10 @@
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/5/8/58da074a-a776-4e3f-be04-9e7f18320ae1.jpg?1631050142</card>
+                    <art>https://cards.scryfall.io/art_crop/front/5/8/58da074a-a776-4e3f-be04-9e7f18320ae1.jpg?1631050142</art>
+                </images>
                 <subtype>Elf Warrior</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
@@ -59,7 +48,7 @@
                 </legality>
                 <artist>Alexander Mokhov</artist>
             </card>
-            <card count="2">
+            <card count="2" id="3fa71348-fa4d-4f39-a451-cf1570591991">
                 <name>Imperious Perfect</name>
                 <colors>
                     <color>Green</color>
@@ -70,6 +59,10 @@
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/a/9/a93e9d33-0c5d-4890-a1aa-84f59af9d4fb.jpg?1631234951</card>
+                    <art>https://cards.scryfall.io/art_crop/front/a/9/a93e9d33-0c5d-4890-a1aa-84f59af9d4fb.jpg?1631234951</art>
+                </images>
                 <subtype>Elf Warrior</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
@@ -88,7 +81,7 @@
                 </legality>
                 <artist>Scott M. Fischer</artist>
             </card>
-            <card count="2">
+            <card count="2" id="5104053a-d394-4b00-82a4-60fd9f051a6e">
                 <name>Fierce Empath</name>
                 <colors>
                     <color>Green</color>
@@ -99,6 +92,10 @@
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/f/1/f13ddd38-397c-4119-8d55-50c7407883f9.jpg?1599707212</card>
+                    <art>https://cards.scryfall.io/art_crop/front/f/1/f13ddd38-397c-4119-8d55-50c7407883f9.jpg?1599707212</art>
+                </images>
                 <subtype>Elf</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
@@ -122,7 +119,7 @@
                 </legality>
                 <artist>Johann Bodin</artist>
             </card>
-            <card count="2">
+            <card count="2" id="b81eaa2f-0554-41c6-bdf6-d1cb73b8f56f">
                 <name>Realmwalker</name>
                 <colors>
                     <color>Green</color>
@@ -133,6 +130,10 @@
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/c/8/c8212667-7e18-42a5-9f36-4f8a6ad12f83.jpg?1631050788</card>
+                    <art>https://cards.scryfall.io/art_crop/front/c/8/c8212667-7e18-42a5-9f36-4f8a6ad12f83.jpg?1631050788</art>
+                </images>
                 <subtype>Shapeshifter</subtype>
                 <power>2</power>
                 <toughness>3</toughness>
@@ -154,7 +155,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Zack Stella</artist>
             </card>
-            <card count="2">
+            <card count="2" id="8c52bd39-0586-48ca-b263-17210cf9feb6">
                 <name>Craterhoof Behemoth</name>
                 <colors>
                     <color>Green</color>
@@ -165,6 +166,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>3</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/4/4/44afd414-cc69-4888-ba12-7ea87e60b1f7.jpg?1601079153</card>
+                    <art>https://cards.scryfall.io/art_crop/front/4/4/44afd414-cc69-4888-ba12-7ea87e60b1f7.jpg?1601079153</art>
+                </images>
                 <subtype>Beast</subtype>
                 <power>5</power>
                 <toughness>5</toughness>
@@ -182,7 +187,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Chris Rahn</artist>
             </card>
-            <card count="3">
+            <card count="3" id="ee35de1c-aef1-4bd4-85fd-fe77bc927790">
                 <name>Marwyn, the Nurturer</name>
                 <colors>
                     <color>Green</color>
@@ -193,6 +198,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>1</green>
                 </cost>
                 <type>Legendary Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/a/a/aad61d99-5c8e-47b7-ab1a-e70905f59205.jpg?1631235039</card>
+                    <art>https://cards.scryfall.io/art_crop/front/a/a/aad61d99-5c8e-47b7-ab1a-e70905f59205.jpg?1631235039</art>
+                </images>
                 <subtype>Elf Druid</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
@@ -213,7 +222,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Chris Rahn</artist>
             </card>
-            <card count="4">
+            <card count="4" id="98295bdc-db58-4e1f-ad4c-63092aea207e">
                 <name>Allosaurus Shepherd</name>
                 <colors>
                     <color>Green</color>
@@ -223,6 +232,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/7/a/7afa0ee5-a0b8-472e-9991-09402ddb5de3.jpg?1662526601</card>
+                    <art>https://cards.scryfall.io/art_crop/front/7/a/7afa0ee5-a0b8-472e-9991-09402ddb5de3.jpg?1662526601</art>
+                </images>
                 <subtype>Elf Shaman</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
@@ -240,7 +253,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Randy Vargas</artist>
             </card>
-            <card count="4">
+            <card count="4" id="e2f98813-4f39-4135-b05b-407e9eb797f6">
                 <name>Jaspera Sentinel</name>
                 <colors>
                     <color>Green</color>
@@ -250,6 +263,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/1/a/1a68615d-9808-479d-aa80-50651246954e.jpg?1631050453</card>
+                    <art>https://cards.scryfall.io/art_crop/front/1/a/1a68615d-9808-479d-aa80-50651246954e.jpg?1631050453</art>
+                </images>
                 <subtype>Elf Rogue</subtype>
                 <power>1</power>
                 <toughness>2</toughness>
@@ -271,7 +288,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Raoul Vitale</artist>
             </card>
-            <card count="4">
+            <card count="4" id="68954295-54e3-4303-a6bc-fc4547a4e3a3">
                 <name>Llanowar Elves</name>
                 <colors>
                     <color>Green</color>
@@ -281,6 +298,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/8/b/8bbcfb77-daa1-4ce5-b5f9-48d0a8edbba9.jpg?1592765148</card>
+                    <art>https://cards.scryfall.io/art_crop/front/8/b/8bbcfb77-daa1-4ce5-b5f9-48d0a8edbba9.jpg?1592765148</art>
+                </images>
                 <subtype>Elf Druid</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
@@ -304,7 +325,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Chris Rahn</artist>
             </card>
-            <card count="4">
+            <card count="4" id="6e2c2423-d854-4478-99e6-64f29851f026">
                 <name>Elvish Archdruid</name>
                 <colors>
                     <color>Green</color>
@@ -315,6 +336,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>2</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/4/d/4d3fffa5-50ec-4502-9f03-bd9618f1771e.jpg?1631234798</card>
+                    <art>https://cards.scryfall.io/art_crop/front/4/d/4d3fffa5-50ec-4502-9f03-bd9618f1771e.jpg?1631234798</art>
+                </images>
                 <subtype>Elf Druid</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
@@ -333,7 +358,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Raymond Swanland</artist>
             </card>
-            <card count="4">
+            <card count="4" id="a8f5440e-5d4b-420a-8cfd-27a3c72be0d2">
                 <name>Elvish Clancaller</name>
                 <colors>
                     <color>Green</color>
@@ -343,6 +368,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>2</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/4/d/4da3b0bc-84da-4b85-992b-d0700c97157c.jpg?1616182131</card>
+                    <art>https://cards.scryfall.io/art_crop/front/4/d/4da3b0bc-84da-4b85-992b-d0700c97157c.jpg?1616182131</art>
+                </images>
                 <subtype>Elf Druid</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
@@ -362,7 +391,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Matt Stewart</artist>
             </card>
-            <card count="4">
+            <card count="4" id="3d4a7dd3-9258-4bd1-adc4-08f0205e196a">
                 <name>Dwynen's Elite</name>
                 <colors>
                     <color>Green</color>
@@ -373,6 +402,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>1</green>
                 </cost>
                 <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/d/9/d95d4f15-613c-42f1-a49b-f4f604e69feb.jpg?1601079261</card>
+                    <art>https://cards.scryfall.io/art_crop/front/d/9/d95d4f15-613c-42f1-a49b-f4f604e69feb.jpg?1601079261</art>
+                </images>
                 <subtype>Elf Warrior</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
@@ -392,7 +425,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Volkan Baǵa</artist>
             </card>
-            <card count="4">
+            <card count="4" id="0bbcb563-09b3-499d-a9cc-3a6d7501dd81">
                 <name>Collected Company</name>
                 <colors>
                     <color>Green</color>
@@ -403,6 +436,10 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <green>1</green>
                 </cost>
                 <type>Instant</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/c/f/cfa7b456-7e83-4587-a875-9b35fde318c2.jpg?1582117536</card>
+                    <art>https://cards.scryfall.io/art_crop/front/c/f/cfa7b456-7e83-4587-a875-9b35fde318c2.jpg?1582117536</art>
+                </images>
                 <text>Look at the top six cards of your library. Put up to two creature cards with mana value 3 or less from among them onto the battlefield. Put the rest on the bottom of your library in any order.></text>
                 <set>dtk</set>
                 <legality>
@@ -419,12 +456,16 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Franz Vohwinkel</artist>
             </card>
-            <card count="1">
+            <card count="1" id="b2d5ba45-8674-4428-89db-c2bbbf0bf5c5">
                 <name>Khalni Garden</name>
                 <colors></colors>
                 <rarity>Common</rarity>
                 <cost></cost>
                 <type>Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg?1592711564</card>
+                    <art>https://cards.scryfall.io/art_crop/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg?1592711564</art>
+                </images>
                 <text>Khalni Garden enters the battlefield tapped. When Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.
 {T}: Add {G}.></text>
                 <set>c18</set>
@@ -442,12 +483,16 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Ryan Pancoast</artist>
             </card>
-            <card count="3">
+            <card count="3" id="126e9140-2c05-4c00-8b01-5653456c736a">
                 <name>Lair of the Hydra</name>
                 <colors></colors>
                 <rarity>Rare</rarity>
                 <cost></cost>
                 <type>Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/b/6/b670bb0f-680f-4036-bdb6-ac73e866a398.jpg?1627710336</card>
+                    <art>https://cards.scryfall.io/art_crop/front/b/6/b670bb0f-680f-4036-bdb6-ac73e866a398.jpg?1627710336</art>
+                </images>
                 <text>If you control two or more other lands, Lair of the Hydra enters the battlefield tapped. {T}: Add {G}.
 {X}{G}: Until end of turn, Lair of the Hydra becomes an X/X green Hydra creature. It's still a land. X can't be 0.></text>
                 <set>afr</set>
@@ -465,12 +510,16 @@ You may cast creature spells of the chosen type from the top of your library.></
                 </legality>
                 <artist>Johannes Voss</artist>
             </card>
-            <card count="16">
+            <card count="16" id="b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6">
                 <name>Forest</name>
                 <colors></colors>
                 <rarity>Common</rarity>
                 <cost></cost>
                 <type>Basic Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/a/6/a63eab07-46e5-4b75-954f-b5a9f1f451cd.jpg?1668759038</card>
+                    <art>https://cards.scryfall.io/art_crop/front/a/6/a63eab07-46e5-4b75-954f-b5a9f1f451cd.jpg?1668759038</art>
+                </images>
                 <subtype>Forest</subtype>
                 <text>({T}: Add {G}.)></text>
                 <set>bro</set>

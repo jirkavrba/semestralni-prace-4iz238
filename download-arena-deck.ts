@@ -1,12 +1,10 @@
 #!/usr/bin/env -S deno run --allow-read --allow-net
-
 import fs from "https://deno.land/std@0.165.0/node/fs.ts";
+import { ERR_CONSOLE_WRITABLE_STREAM } from "https://deno.land/std@0.165.0/node/internal/errors.ts";
 import process from "https://deno.land/std@0.165.0/node/process.ts";
 import { _format } from "https://deno.land/std@0.165.0/path/_util.ts";
-
 const capitalize = (input: string): string =>
   input.charAt(0).toUpperCase() + input.slice(1);
-
 const source = fs.readFileSync("./deck.txt").toString();
 const parsed = source.split("\n")
   .map((line) => line.trim())
@@ -18,7 +16,6 @@ const parsed = source.split("\n")
       name: name.join(" "),
     };
   });
-
 const data = await Promise.all(
   parsed.map(({ count, name }) => {
     return fetch(
@@ -30,6 +27,7 @@ const data = await Promise.all(
         return {
           count,
           data: {
+            id: response.oracle_id,
             name: response.name,
             cost: response.mana_cost,
             rarity: response.rarity,
@@ -37,7 +35,10 @@ const data = await Promise.all(
             type: response.type_line,
             colors: response.colors,
             text: response.oracle_text,
-            image: response.image_uris.art_crop,
+            image: {
+              card: response.image_uris.large,
+              art: response.image_uris.art_crop,
+            },
             artist: response.artist,
             power: response.power,
             toughness: response.toughness,
@@ -47,10 +48,8 @@ const data = await Promise.all(
       });
   }),
 );
-
 type Symbol = "G" | "R" | "W" | "U" | "B";
 type Color = "colorless" | "green" | "red" | "white" | "blue" | "black";
-
 const colors: Record<Symbol, Color> = {
   "G": "green",
   "R": "red",
@@ -58,7 +57,6 @@ const colors: Record<Symbol, Color> = {
   "U": "blue",
   "B": "black",
 };
-
 const processCost = (source: string): string => {
   const cost: Record<Color, number> = [
     ...source.matchAll(/\{([0-9]+|G|R|B|U|W)\}/g),
@@ -66,10 +64,8 @@ const processCost = (source: string): string => {
     if (match[1].match(/\d+/)) {
       return { ...accumulator, colorless: Number(match[1]) };
     }
-
     const symbol: Symbol = match[1] as Symbol;
     const color: Color = colors[symbol];
-
     return { ...accumulator, [color]: accumulator[color] + 1 };
   }, {
     colorless: 0,
@@ -79,54 +75,57 @@ const processCost = (source: string): string => {
     blue: 0,
     black: 0,
   });
-
   return Object.entries(cost)
     .filter(([_color, value]) => value > 0)
     .map(([color, value]) => "<" + color + ">" + value + "</" + color + ">")
     .join("\n");
 };
-
 const processType = (source: string): { type: string; subtype: string } => {
   const [type, subtype] = (source)
     .split(" — ")
     .map((item) => item.trim());
-
   return {
     type,
     subtype,
   };
 };
-
 const processColors = (source: Array<Symbol>): string => {
   return source
     .map((symbol) => colors[symbol])
     .map((color) => `<color>${capitalize(color)}</color>`)
     .join("\n");
 };
-
 const processLegality = (source: Record<string, string>): string => {
   return Object.entries(source)
     .filter(([_format, legality]) => legality === "legal")
     .map(([format]) => `<format>${format}</format>`)
     .join("\n");
 };
-
 const transformed = data.map((card) => {
   const cost = processCost(card.data.cost);
   const colors = processColors(card.data.colors);
   const legality = processLegality(card.data.legalities);
   const { type, subtype } = processType(card.data.type);
-
   return `
-        <card count="${card.count}">
+        <card count="${card.count}" id="${card.data.id}">
             <name>${card.data.name}</name>
             <colors>${colors}</colors>
             <rarity>${capitalize(card.data.rarity)}</rarity>
             <cost>${cost}</cost>
             <type>${type}</type>
-            ${subtype !== undefined ? ("<subtype>" + subtype + "</subtype>") : ""}
+            <images>
+              <card>${card.data.image.card}</card>
+              <art>${card.data.image.art}</art>
+            </images>
+            ${
+    subtype !== undefined ? ("<subtype>" + subtype + "</subtype>") : ""
+  }
             ${card.data.power ? ("<power>" + card.data.power + "</power>") : ""}
-            ${card.data.toughness ? ("<toughness>" + card.data.toughness + "</toughness>") : ""}
+            ${
+    card.data.toughness
+      ? ("<toughness>" + card.data.toughness + "</toughness>")
+      : ""
+  }
             <text>${card.data.text.replace("\n", " ")}></text>
             <set>${card.data.set}</set>
             <legality>${legality}</legality>
@@ -134,6 +133,5 @@ const transformed = data.map((card) => {
         </card>
     `;
 })
-.join("\n");
-
+  .join("\n");
 process.stdout.write(transformed);
