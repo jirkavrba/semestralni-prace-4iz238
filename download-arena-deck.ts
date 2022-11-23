@@ -1,10 +1,8 @@
 #!/usr/bin/env -S deno run --allow-read --allow-net
 import fs from "https://deno.land/std@0.165.0/node/fs.ts";
-import { ERR_CONSOLE_WRITABLE_STREAM } from "https://deno.land/std@0.165.0/node/internal/errors.ts";
 import process from "https://deno.land/std@0.165.0/node/process.ts";
-import { _format } from "https://deno.land/std@0.165.0/path/_util.ts";
-const capitalize = (input: string): string =>
-  input.charAt(0).toUpperCase() + input.slice(1);
+
+const capitalize = (input: string): string => input.charAt(0).toUpperCase() + input.slice(1);
 const source = fs.readFileSync("./deck.txt").toString();
 const parsed = source.split("\n")
   .map((line) => line.trim())
