@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:dev.vrba:xml:mtg" targetNamespace="urn:dev.vrba:xml:mtg">
+
+    <xs:simpleType name="formatType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Standard"/>
+            <xs:enumeration value="Historic"/>
+            <xs:enumeration value="Commander"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="colorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Green"/>
+            <xs:enumeration value="Red"/>
+            <xs:enumeration value="Blue"/>
+            <xs:enumeration value="Black"/>
+            <xs:enumeration value="White"/>
+            <xs:enumeration value="Colorless"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="colorsType">
+        <xs:sequence>
+            <xs:element name="color" type="colorType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="deckType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="format" type="formatType"/>
+            <xs:element name="colors" type="colorsType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="decksType">
+        <xs:sequence>
+            <xs:element name="deck" type="deckType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="decks" type="decksType"/>
+</xs:schema>

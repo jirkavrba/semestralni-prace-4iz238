@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<decks xmlns="urn:dev.vrba:xml:mtg">
+<decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:dev.vrba:xml:mtg decks.xsd" xmlns="urn:dev.vrba:xml:mtg">
     <deck>
         <name>Emotional Damage</name>
         <format>Historic</format>
@@ -546,4 +546,4 @@ You may cast creature spells of the chosen type from the top of your library.></
             </card>
         </cards>
     </deck>
-</decks>
+</decks></decks>
