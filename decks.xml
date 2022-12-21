@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:dev.vrba:xml:mtg decks.xsd" xmlns="urn:dev.vrba:xml:mtg">
+<mtg:decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:dev.vrba:xml:mtg decks.xsd" xmlns:mtg="urn:dev.vrba:xml:mtg">
     <deck>
         <name>Emotional Damage</name>
         <format>Historic</format>
@@ -546,4 +546,498 @@ You may cast creature spells of the chosen type from the top of your library.></
             </card>
         </cards>
     </deck>
-</decks></decks>
+    <deck>
+        <cards>
+            <card count="2" id="786baa29-afd4-40f0-95c8-920a972b9175">
+                <name>Kari Zev, Skyship Raider</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <red>1</red>
+                </cost>
+                <type>Legendary Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/5/2/52de8af2-d260-42a8-b8c2-b26b392632d1.jpg?1664360672</card>
+                    <art>https://cards.scryfall.io/art_crop/front/5/2/52de8af2-d260-42a8-b8c2-b26b392632d1.jpg?1664360672</art>
+                </images>
+                <subtype>Human Pirate</subtype>
+                <power>1</power>
+                <toughness>3</toughness>
+                <text>First strike, menace Whenever Kari Zev, Skyship Raider attacks, create Ragavan, a legendary 2/1 red Monkey creature token. Ragavan enters the battlefield tapped and attacking. Exile that token at end of combat.></text>
+                <set>dmc</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Penny</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Brad Rigney</artist>
+            </card>
+
+
+            <card count="2" id="bc9cb8d1-9bbb-4b3f-82ef-ea0cd7e44e35">
+                <name>Reckless Ringleader</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Common</rarity>
+                <cost>
+                    <red>1</red>
+                </cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/d/d/dd2202a0-9c79-4ddb-b33e-a4aa01ab022b.jpg?1630244282</card>
+                    <art>https://cards.scryfall.io/art_crop/front/d/d/dd2202a0-9c79-4ddb-b33e-a4aa01ab022b.jpg?1630244282</art>
+                </images>
+                <subtype>Goblin Rogue</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>Haste When Reckless Ringleader enters the battlefield, choose a creature card in your hand. It perpetually gains haste.></text>
+                <set>j21</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Historicbrawl</format>
+                </legality>
+                <artist>Brian Valeza</artist>
+            </card>
+
+
+            <card count="14" id="a3fb7228-e76b-4e96-a40e-20b5fed75685">
+                <name>Mountain</name>
+                <colors></colors>
+                <rarity>Common</rarity>
+                <cost></cost>
+                <type>Basic Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/9/5/95083e1d-faf5-40e4-9be5-909cd01cc2b5.jpg?1670539843</card>
+                    <art>https://cards.scryfall.io/art_crop/front/9/5/95083e1d-faf5-40e4-9be5-909cd01cc2b5.jpg?1670539843</art>
+                </images>
+                <subtype>Mountain</subtype>
+
+
+                <text>({T}: Add {R}.)></text>
+                <set>bro</set>
+                <legality>
+                    <format>Standard</format>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Pauper</format>
+                    <format>Vintage</format>
+                    <format>Penny</format>
+                    <format>Commander</format>
+                    <format>Brawl</format>
+                    <format>Historicbrawl</format>
+                    <format>Alchemy</format>
+                    <format>Paupercommander</format>
+                    <format>Duel</format>
+                    <format>Premodern</format>
+                </legality>
+                <artist>Bruce Brenneise</artist>
+            </card>
+
+
+            <card count="4" id="327d9679-0049-4401-8dab-e0fb362306bd">
+                <name>Burning-Tree Emissary</name>
+                <colors>
+                    <color>Green</color>
+                    <color>Red</color>
+                </colors>
+                <rarity>Common</rarity>
+                <cost></cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/b/a/ba327a5e-bd57-4e24-b4b4-062202df30e1.jpg?1662528002</card>
+                    <art>https://cards.scryfall.io/art_crop/front/b/a/ba327a5e-bd57-4e24-b4b4-062202df30e1.jpg?1662528002</art>
+                </images>
+                <subtype>Human Shaman</subtype>
+                <power>2</power>
+                <toughness>2</toughness>
+                <text>When Burning-Tree Emissary enters the battlefield, add {R}{G}.></text>
+                <set>2x2</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Pauper</format>
+                    <format>Vintage</format>
+                    <format>Penny</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Paupercommander</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Izzy</artist>
+            </card>
+
+
+            <card count="4" id="d0d35864-1edc-4af1-9b89-3d7e94908011">
+                <name>Ramunap Ruins</name>
+                <colors></colors>
+                <rarity>Uncommon</rarity>
+                <cost></cost>
+                <type>Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/a/f/af11d41a-0d29-45e9-9d27-a41282b9e292.jpg?1562810961</card>
+                    <art>https://cards.scryfall.io/art_crop/front/a/f/af11d41a-0d29-45e9-9d27-a41282b9e292.jpg?1562810961</art>
+                </images>
+                <subtype>Desert</subtype>
+
+
+                <text>{T}: Add {C}. {T}, Pay 1 life: Add {R}.
+{2}{R}{R}, {T}, Sacrifice a Desert: Ramunap Ruins deals 2 damage to each opponent.></text>
+                <set>hou</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Florian de Gesincourt</artist>
+            </card>
+
+
+            <card count="4" id="d36e11f1-6ab3-4273-8114-a8fbbe21c1c3">
+                <name>Fanatical Firebrand</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Common</rarity>
+                <cost>
+                    <red>1</red>
+                </cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/0/5/05469d01-0d2b-47b9-8a69-16cf0c3d43f8.jpg?1601077610</card>
+                    <art>https://cards.scryfall.io/art_crop/front/0/5/05469d01-0d2b-47b9-8a69-16cf0c3d43f8.jpg?1601077610</art>
+                </images>
+                <subtype>Goblin Pirate</subtype>
+                <power>1</power>
+                <toughness>1</toughness>
+                <text>Haste {T}, Sacrifice Fanatical Firebrand: It deals 1 damage to any target.></text>
+                <set>jmp</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Pauper</format>
+                    <format>Vintage</format>
+                    <format>Penny</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Paupercommander</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Wayne Reynolds</artist>
+            </card>
+
+
+            <card count="4" id="0342b085-be20-475a-bc38-59b9cb6012e8">
+                <name>Goblin Chainwhirler</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <red>3</red>
+                </cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/8/b/8bdb2883-3cfd-4fb0-9f99-6a57277f7fe4.jpg?1562739277</card>
+                    <art>https://cards.scryfall.io/art_crop/front/8/b/8bdb2883-3cfd-4fb0-9f99-6a57277f7fe4.jpg?1562739277</art>
+                </images>
+                <subtype>Goblin Warrior</subtype>
+                <power>3</power>
+                <toughness>3</toughness>
+                <text>First strike When Goblin Chainwhirler enters the battlefield, it deals 1 damage to each opponent and each creature and planeswalker they control.></text>
+                <set>dom</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Svetlin Velinov</artist>
+            </card>
+
+
+            <card count="2" id="d6d72f5f-8f5d-4180-b514-f22ff5482902">
+                <name>Bonecrusher Giant // Stomp</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <red>2</red>
+                </cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/b/5/b5b71cd2-de35-451f-b16e-2e3936169407.jpg?1654116944</card>
+                    <art>https://cards.scryfall.io/art_crop/front/b/5/b5b71cd2-de35-451f-b16e-2e3936169407.jpg?1654116944</art>
+                </images>
+                <subtype>Giant // Instant</subtype>
+                <power>4</power>
+                <toughness>3</toughness>
+                <text>undefined></text>
+                <set>clb</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Victor Adame Minguez</artist>
+            </card>
+
+
+            <card count="3" id="4d6120d6-fcce-40bc-9fc6-e1f5beb6c728">
+                <name>Embercleave</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Mythic</rarity>
+                <cost>
+                    <colorless>4</colorless>
+                    <red>2</red>
+                </cost>
+                <type>Legendary Artifact</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/1/9/192a4645-1462-4e43-ac39-bafabbb1250d.jpg?1661583547</card>
+                    <art>https://cards.scryfall.io/art_crop/front/1/9/192a4645-1462-4e43-ac39-bafabbb1250d.jpg?1661583547</art>
+                </images>
+                <subtype>Equipment</subtype>
+
+
+                <text>Flash This spell costs {1} less to cast for each attacking creature you control.
+When Embercleave enters the battlefield, attach it to target creature you control.
+Equipped creature gets +1/+1 and has double strike and trample.
+Equip {3}></text>
+                <set>phed</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Joe Slucher</artist>
+            </card>
+
+
+            <card count="4" id="4df0d381-fc05-4d30-9307-48963aa2ecfd">
+                <name>Robber of the Rich</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Mythic</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <red>1</red>
+                </cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/0/e/0ecbe097-ba51-42e5-957c-382eb66c08f0.jpg?1572490437</card>
+                    <art>https://cards.scryfall.io/art_crop/front/0/e/0ecbe097-ba51-42e5-957c-382eb66c08f0.jpg?1572490437</art>
+                </images>
+                <subtype>Human Archer Rogue</subtype>
+                <power>2</power>
+                <toughness>2</toughness>
+                <text>Reach, haste Whenever Robber of the Rich attacks, if defending player has more cards in hand than you, exile the top card of their library. During any turn you attacked with a Rogue, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.></text>
+                <set>eld</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Paul Scott Canavan</artist>
+            </card>
+
+
+            <card count="3" id="8c3495bf-02e7-4ad9-949d-92eb3d2b662a">
+                <name>Torbran, Thane of Red Fell</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Rare</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <red>3</red>
+                </cost>
+                <type>Legendary Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/7/9/79f591cd-d277-4ba5-b1bf-1c09cac9cb8a.jpg?1572490491</card>
+                    <art>https://cards.scryfall.io/art_crop/front/7/9/79f591cd-d277-4ba5-b1bf-1c09cac9cb8a.jpg?1572490491</art>
+                </images>
+                <subtype>Dwarf Noble</subtype>
+                <power>2</power>
+                <toughness>4</toughness>
+                <text>If a red source you control would deal damage to an opponent or a permanent an opponent controls, it deals that much damage plus 2 instead.></text>
+                <set>eld</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Grzegorz Rutkowski</artist>
+            </card>
+
+
+            <card count="4" id="e23cd06d-1360-4e5d-aecc-adf902bede69">
+                <name>Anax, Hardened in the Forge</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Uncommon</rarity>
+                <cost>
+                    <colorless>1</colorless>
+                    <red>2</red>
+                </cost>
+                <type>Legendary Enchantment Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/a/0/a07285b4-77c5-4a38-8810-20d7e49593ec.jpg?1581480059</card>
+                    <art>https://cards.scryfall.io/art_crop/front/a/0/a07285b4-77c5-4a38-8810-20d7e49593ec.jpg?1581480059</art>
+                </images>
+                <subtype>Demigod</subtype>
+                <power>*</power>
+                <toughness>3</toughness>
+                <text>Anax's power is equal to your devotion to red. (Each {R} in the mana costs of permanents you control counts toward your devotion to red.) Whenever Anax or another nontoken creature you control dies, create a 1/1 red Satyr creature token with "This creature can't block." If the creature had power 4 or greater, create two of those tokens instead.></text>
+                <set>thb</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Penny</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Eric Deschamps</artist>
+            </card>
+
+
+            <card count="4" id="f451b8f0-1ff5-4e8d-9f30-9352d83ed687">
+                <name>Den of the Bugbear</name>
+                <colors></colors>
+                <rarity>Rare</rarity>
+                <cost></cost>
+                <type>Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/f/2/f231caf8-56c0-4719-a90d-5e5efbee3148.jpg?1627710135</card>
+                    <art>https://cards.scryfall.io/art_crop/front/f/2/f231caf8-56c0-4719-a90d-5e5efbee3148.jpg?1627710135</art>
+                </images>
+
+
+                <text>If you control two or more other lands, Den of the Bugbear enters the battlefield tapped. {T}: Add {R}.
+{3}{R}: Until end of turn, Den of the Bugbear becomes a 3/2 red Goblin creature with "Whenever this creature attacks, create a 1/1 red Goblin creature token that's tapped and attacking." It's still a land.></text>
+                <set>afr</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Johannes Voss</artist>
+            </card>
+
+
+            <card count="2" id="91fbb25b-8521-483f-88b0-77778d25f7fd">
+                <name>Castle Embereth</name>
+                <colors></colors>
+                <rarity>Rare</rarity>
+                <cost></cost>
+                <type>Land</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/e/b/eb4126a6-5f79-4dad-8d18-e279ca19d2b2.jpg?1654119200</card>
+                    <art>https://cards.scryfall.io/art_crop/front/e/b/eb4126a6-5f79-4dad-8d18-e279ca19d2b2.jpg?1654119200</art>
+                </images>
+
+
+                <text>Castle Embereth enters the battlefield tapped unless you control a Mountain. {T}: Add {R}.
+{1}{R}{R}, {T}: Creatures you control get +1/+0 until end of turn.></text>
+                <set>clb</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Jaime Jones</artist>
+            </card>
+
+        </cards>
+    </deck>
+</mtg:decks>

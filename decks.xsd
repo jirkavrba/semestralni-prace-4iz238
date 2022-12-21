@@ -1,45 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:dev.vrba:xml:mtg" targetNamespace="urn:dev.vrba:xml:mtg">
-
     <xs:simpleType name="formatType">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Standard"/>
-            <xs:enumeration value="Historic"/>
-            <xs:enumeration value="Commander"/>
+            <xs:enumeration value="Standard" />
+            <xs:enumeration value="Historic" />
+            <xs:enumeration value="Commander" />
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="colorType">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Green"/>
-            <xs:enumeration value="Red"/>
-            <xs:enumeration value="Blue"/>
-            <xs:enumeration value="Black"/>
-            <xs:enumeration value="White"/>
-            <xs:enumeration value="Colorless"/>
+            <xs:enumeration value="Green" />
+            <xs:enumeration value="Red" />
+            <xs:enumeration value="Blue" />
+            <xs:enumeration value="Black" />
+            <xs:enumeration value="White" />
+            <xs:enumeration value="Colorless" />
         </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rarityType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Common" />
+            <xs:enumeration value="Uncommon" />
+            <xs:enumeration value="Rare" />
+            <xs:enumeration value="Mythic" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="basicPowerToughnessType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="powerToughnessType">
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:integer" />
+            </xs:simpleType>
+            <xs:simpleType>
+                <!-- Special cases for creatures with variable power/toughness -->
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="*" />
+                    <xs:enumeration value="{X}" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
     </xs:simpleType>
 
     <xs:complexType name="colorsType">
         <xs:sequence>
-            <xs:element name="color" type="colorType"/>
+            <xs:element name="color" type="colorType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="gameType">
+        <xs:all>
+            <xs:element name="wins" type="xs:integer" />
+            <xs:element name="loses" type="xs:integer" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="statsType">
+        <xs:sequence>
+            <xs:element name="game" type="gameType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="costType">
+        <xs:sequence>
+            <xs:element name="colorless" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="green" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="red" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="blue" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="black" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="white" type="xs:integer" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imagesType">
+        <xs:sequence>
+            <xs:element name="card" type="xs:string" />
+            <xs:element name="art" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="legalityType">
+        <xs:sequence>
+            <!-- TODO: Generate xs:enumeration to a separate formatType -->
+            <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cardType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="colors" type="colorsType" />
+            <xs:element name="rarity" type="rarityType" />
+            <xs:element name="cost" type="costType" />
+            <xs:element name="type" type="xs:string" />
+            <xs:element name="images" type="imagesType" />
+            <xs:element name="subtype" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="power" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="toughness" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="text" type="xs:string" />
+            <!-- TODO: Generate xs:enumeration restriction with valid set names -->
+            <xs:element name="set" type="xs:string" />
+            <xs:element name="legality" type="legalityType" />
+            <xs:element name="artist" type="xs:string" />
+        </xs:sequence>
+
+        <xs:attribute name="count" type="xs:integer" use="required" />
+        <xs:attribute name="id" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="cardsType">
+        <xs:sequence>
+            <xs:element name="card" type="cardType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="deckType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="format" type="formatType"/>
-            <xs:element name="colors" type="colorsType"/>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="format" type="formatType" />
+            <xs:element name="colors" type="colorsType" />
+            <xs:element name="stats" type="statsType" />
+            <xs:element name="cards" type="cardsType" />
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="decksType">
         <xs:sequence>
-            <xs:element name="deck" type="deckType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="deck" type="deckType" minOccurs="1" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="decks" type="decksType"/>
+    <xs:element name="decks" type="decksType" />
 </xs:schema>

@@ -1,9 +1,9 @@
 #!/usr/bin/env -S deno run --allow-read --allow-net
-import fs from "https://deno.land/std@0.165.0/node/fs.ts";
-import process from "https://deno.land/std@0.165.0/node/process.ts";
+import process from "https://deno.land/std@0.165.0/node/process.ts" 
 
 const capitalize = (input: string): string => input.charAt(0).toUpperCase() + input.slice(1);
-const source = fs.readFileSync("./deck.txt").toString();
+
+const source = Deno.readTextFileSync("./monored.txt");
 const parsed = source.split("\n")
   .map((line) => line.trim())
   .filter((line) => line.length > 0)
@@ -18,7 +18,7 @@ const data = await Promise.all(
   parsed.map(({ count, name }) => {
     return fetch(
       "https://api.scryfall.com/cards/named?exact=" +
-        name.replace(/\s+/g, "+").toLowerCase(),
+      name.replace(/\s+/g, "+").toLowerCase(),
     )
       .then((response) => response.json())
       .then((response) => {
@@ -96,7 +96,7 @@ const processColors = (source: Array<Symbol>): string => {
 const processLegality = (source: Record<string, string>): string => {
   return Object.entries(source)
     .filter(([_format, legality]) => legality === "legal")
-    .map(([format]) => `<format>${format}</format>`)
+    .map(([format]) => `<format>${capitalize(format)}</format>`)
     .join("\n");
 };
 const transformed = data.map((card) => {
@@ -115,16 +115,14 @@ const transformed = data.map((card) => {
               <card>${card.data.image.card}</card>
               <art>${card.data.image.art}</art>
             </images>
-            ${
-    subtype !== undefined ? ("<subtype>" + subtype + "</subtype>") : ""
-  }
+            ${subtype !== undefined ? ("<subtype>" + subtype + "</subtype>") : ""
+    }
             ${card.data.power ? ("<power>" + card.data.power + "</power>") : ""}
-            ${
-    card.data.toughness
+            ${card.data.toughness
       ? ("<toughness>" + card.data.toughness + "</toughness>")
       : ""
-  }
-            <text>${card.data.text.replace("\n", " ")}></text>
+    }
+            <text>${card.data.text?.replace("\n", " ")}></text>
             <set>${card.data.set}</set>
             <legality>${legality}</legality>
             <artist>${card.data.artist}</artist>
