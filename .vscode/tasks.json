@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "xslt",
+			"label": "XSLT: Transform deccks.xml to HTML",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${file}",
+			"xmlSource": "${file}",
+			"resultPath": "${workspaceFolder}/output/decks.html",
+			"allowSyntaxExtensions40": "off",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
+		}
+	]
+}
