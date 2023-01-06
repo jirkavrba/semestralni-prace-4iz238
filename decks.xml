@@ -862,7 +862,7 @@ You may cast creature spells of the chosen type from the top of your library.></
 When Embercleave enters the battlefield, attach it to target creature you control.
 Equipped creature gets +1/+1 and has double strike and trample.
 Equip {3}></text>
-                <set>phed</set>
+                <set>kld</set>
                 <legality>
                     <format>Historic</format>
                     <format>Gladiator</format>
