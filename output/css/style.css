@@ -159,13 +159,16 @@
 }
 
 .deck .deck-card {
+    padding: 0.5rem;
+    border: 1px solid #dddddd;
+    border-bottom: none;
+}
+
+.deck .deck-card .card-top {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem;
-    border: 1px solid #dddddd;
-    border-bottom: none;
 }
 
 .deck .deck-cards .deck-card:first-child {
@@ -177,7 +180,7 @@
     border-bottom: 1px solid #dddddd;
 }
 
-.deck .deck-card .card-name {
+.deck .deck-card .card-top .card-name {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -186,17 +189,69 @@
     color: #404040;
 }
 
-.deck .deck-card .card-count {
+.deck .deck-card .card-top .card-count {
     width: 2rem;
     font-family: monospace;
     font-size: 0.75rem;
     font-weight: bold;
-    text-align: right; 
+    text-align: right;
     margin-right: 0.5rem;
 }
 
-.deck .deck-card .card-cost {
+.deck .deck-card .card-top .card-cost {
     display: inline-flex;
     flex-flow: row nowrap;
     gap: 0.1rem;
+}
+
+.deck .deck-card .card-details {
+    display: none;
+    padding: 1rem;
+    padding-left: 2.5rem;
+}
+
+.deck .deck-card:hover .card-details {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.deck .deck-card:hover {
+    background: #f4f4f5;
+}
+
+.deck .deck-card .card-details .card-image {
+    width: 200px;
+    border-radius: 1rem;
+}
+
+.deck .deck-card .card-details .card-information {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.deck .deck-card .card-details .card-information .card-text {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    padding-right: 1rem;
+    margin: 1rem 0;
+}
+
+.deck .deck-card .card-details .card-information .card-subtype {
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0.75;
+}
+
+.deck .deck-card .card-details .card-information .card-creature {
+    display: inline-block;
+    align-self: flex-start;
+    color: #18181b;
+    border: 2px solid #18181b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mtg:decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://vrba.dev/mtg decks.xsd" xmlns:mtg="https://vrba.dev/mtg">
+<mtg:decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://vrba.dev/mtg decks.xsd"
+    xmlns:mtg="https://vrba.dev/mtg">
     <deck>
         <name>Emotional Damage</name>
         <format>Historic</format>
@@ -31,7 +33,7 @@
                 <subtype>Elf Warrior</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
-                <text>Whenever one or more other Elves enter the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn. {5}{G}{G}: Elves you control get +2/+2 and gain deathtouch until end of turn.></text>
+                <text>Whenever one or more other Elves enter the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn. {5}{G}{G}: Elves you control get +2/+2 and gain deathtouch until end of turn.</text>
                 <set>khm</set>
                 <legality>
                     <format>historic</format>
@@ -65,7 +67,7 @@
                 <subtype>Elf Warrior</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
-                <text>Other Elves you control get +1/+1. {G}, {T}: Create a 1/1 green Elf Warrior creature token.></text>
+                <text>Other Elves you control get +1/+1. {G}, {T}: Create a 1/1 green Elf Warrior creature token.</text>
                 <set>khc</set>
                 <legality>
                     <format>historic</format>
@@ -98,7 +100,7 @@
                 <subtype>Elf</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
-                <text>When Fierce Empath enters the battlefield, you may search your library for a creature card with mana value 6 or greater, reveal it, put it into your hand, then shuffle.></text>
+                <text>When Fierce Empath enters the battlefield, you may search your library for a creature card with mana value 6 or greater, reveal it, put it into your hand, then shuffle.</text>
                 <set>2xm</set>
                 <legality>
                     <format>historic</format>
@@ -137,8 +139,8 @@
                 <power>2</power>
                 <toughness>3</toughness>
                 <text>Changeling (This card is every creature type.) As Realmwalker enters the battlefield, choose a creature type.
-You may look at the top card of your library any time.
-You may cast creature spells of the chosen type from the top of your library.></text>
+                    You may look at the top card of your library any time.
+                    You may cast creature spells of the chosen type from the top of your library.</text>
                 <set>khm</set>
                 <legality>
                     <format>historic</format>
@@ -172,7 +174,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Beast</subtype>
                 <power>5</power>
                 <toughness>5</toughness>
-                <text>Haste When Craterhoof Behemoth enters the battlefield, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.></text>
+                <text>Haste When Craterhoof Behemoth enters the battlefield, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.</text>
                 <set>jmp</set>
                 <legality>
                     <format>historic</format>
@@ -204,7 +206,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Elf Druid</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
-                <text>Whenever another Elf enters the battlefield under your control, put a +1/+1 counter on Marwyn, the Nurturer. {T}: Add an amount of {G} equal to Marwyn's power.></text>
+                <text>Whenever another Elf enters the battlefield under your control, put a +1/+1 counter on Marwyn, the Nurturer. {T}: Add an amount of {G} equal to Marwyn's power.</text>
                 <set>khc</set>
                 <legality>
                     <format>historic</format>
@@ -239,7 +241,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <power>1</power>
                 <toughness>1</toughness>
                 <text>This spell can't be countered. Green spells you control can't be countered.
-{4}{G}{G}: Until end of turn, each Elf creature you control has base power and toughness 5/5 and becomes a Dinosaur in addition to its other creature types.></text>
+                    {4}{G}{G}: Until end of turn, each Elf creature you control has base power and toughness 5/5 and becomes a Dinosaur in addition to its other creature types.</text>
                 <set>2x2</set>
                 <legality>
                     <format>historic</format>
@@ -269,7 +271,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Elf Rogue</subtype>
                 <power>1</power>
                 <toughness>2</toughness>
-                <text>Reach {T}, Tap an untapped creature you control: Add one mana of any color.></text>
+                <text>Reach {T}, Tap an untapped creature you control: Add one mana of any color.</text>
                 <set>khm</set>
                 <legality>
                     <format>historic</format>
@@ -304,7 +306,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Elf Druid</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
-                <text>{T}: Add {G}.></text>
+                <text>{T}: Add {G}.</text>
                 <set>gnt</set>
                 <legality>
                     <format>historic</format>
@@ -342,7 +344,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Elf Druid</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
-                <text>Other Elf creatures you control get +1/+1. {T}: Add {G} for each Elf you control.></text>
+                <text>Other Elf creatures you control get +1/+1. {T}: Add {G} for each Elf you control.</text>
                 <set>khc</set>
                 <legality>
                     <format>historic</format>
@@ -374,7 +376,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Elf Druid</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
-                <text>Other Elves you control get +1/+1. {4}{G}{G}, {T}: Search your library for a card named Elvish Clancaller, put it onto the battlefield, then shuffle.></text>
+                <text>Other Elves you control get +1/+1. {4}{G}{G}, {T}: Search your library for a card named Elvish Clancaller, put it onto the battlefield, then shuffle.</text>
                 <set>m19</set>
                 <legality>
                     <format>historic</format>
@@ -408,7 +410,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Elf Warrior</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
-                <text>When Dwynen's Elite enters the battlefield, if you control another Elf, create a 1/1 green Elf Warrior creature token.></text>
+                <text>When Dwynen's Elite enters the battlefield, if you control another Elf, create a 1/1 green Elf Warrior creature token.</text>
                 <set>jmp</set>
                 <legality>
                     <format>historic</format>
@@ -439,7 +441,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <card>https://cards.scryfall.io/large/front/c/f/cfa7b456-7e83-4587-a875-9b35fde318c2.jpg?1582117536</card>
                     <art>https://cards.scryfall.io/art_crop/front/c/f/cfa7b456-7e83-4587-a875-9b35fde318c2.jpg?1582117536</art>
                 </images>
-                <text>Look at the top six cards of your library. Put up to two creature cards with mana value 3 or less from among them onto the battlefield. Put the rest on the bottom of your library in any order.></text>
+                <text>Look at the top six cards of your library. Put up to two creature cards with mana value 3 or less from among them onto the battlefield. Put the rest on the bottom of your library in any order.</text>
                 <set>dtk</set>
                 <legality>
                     <format>historic</format>
@@ -466,7 +468,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <art>https://cards.scryfall.io/art_crop/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg?1592711564</art>
                 </images>
                 <text>Khalni Garden enters the battlefield tapped. When Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.
-{T}: Add {G}.></text>
+                    {T}: Add {G}.</text>
                 <set>c18</set>
                 <legality>
                     <format>historic</format>
@@ -493,7 +495,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <art>https://cards.scryfall.io/art_crop/front/b/6/b670bb0f-680f-4036-bdb6-ac73e866a398.jpg?1627710336</art>
                 </images>
                 <text>If you control two or more other lands, Lair of the Hydra enters the battlefield tapped. {T}: Add {G}.
-{X}{G}: Until end of turn, Lair of the Hydra becomes an X/X green Hydra creature. It's still a land. X can't be 0.></text>
+                    {X}{G}: Until end of turn, Lair of the Hydra becomes an X/X green Hydra creature. It's still a land. X can't be 0.</text>
                 <set>afr</set>
                 <legality>
                     <format>historic</format>
@@ -520,7 +522,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                     <art>https://cards.scryfall.io/art_crop/front/a/6/a63eab07-46e5-4b75-954f-b5a9f1f451cd.jpg?1668759038</art>
                 </images>
                 <subtype>Forest</subtype>
-                <text>({T}: Add {G}.)></text>
+                <text>({T}: Add {G}.)</text>
                 <set>bro</set>
                 <legality>
                     <format>standard</format>
@@ -576,7 +578,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Human Pirate</subtype>
                 <power>1</power>
                 <toughness>3</toughness>
-                <text>First strike, menace Whenever Kari Zev, Skyship Raider attacks, create Ragavan, a legendary 2/1 red Monkey creature token. Ragavan enters the battlefield tapped and attacking. Exile that token at end of combat.></text>
+                <text>First strike, menace Whenever Kari Zev, Skyship Raider attacks, create Ragavan, a legendary 2/1 red Monkey creature token. Ragavan enters the battlefield tapped and attacking. Exile that token at end of combat.</text>
                 <set>dmc</set>
                 <legality>
                     <format>Historic</format>
@@ -612,7 +614,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Goblin Rogue</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
-                <text>Haste When Reckless Ringleader enters the battlefield, choose a creature card in your hand. It perpetually gains haste.></text>
+                <text>Haste When Reckless Ringleader enters the battlefield, choose a creature card in your hand. It perpetually gains haste.</text>
                 <set>j21</set>
                 <legality>
                     <format>Historic</format>
@@ -636,7 +638,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Mountain</subtype>
 
 
-                <text>({T}: Add {R}.)></text>
+                <text>({T}: Add {R}.)</text>
                 <set>bro</set>
                 <legality>
                     <format>Standard</format>
@@ -677,7 +679,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Human Shaman</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
-                <text>When Burning-Tree Emissary enters the battlefield, add {R}{G}.></text>
+                <text>When Burning-Tree Emissary enters the battlefield, add {R}{G}.</text>
                 <set>2x2</set>
                 <legality>
                     <format>Historic</format>
@@ -712,7 +714,7 @@ You may cast creature spells of the chosen type from the top of your library.></
 
 
                 <text>{T}: Add {C}. {T}, Pay 1 life: Add {R}.
-{2}{R}{R}, {T}, Sacrifice a Desert: Ramunap Ruins deals 2 damage to each opponent.></text>
+                    {2}{R}{R}, {T}, Sacrifice a Desert: Ramunap Ruins deals 2 damage to each opponent.</text>
                 <set>hou</set>
                 <legality>
                     <format>Historic</format>
@@ -747,7 +749,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Goblin Pirate</subtype>
                 <power>1</power>
                 <toughness>1</toughness>
-                <text>Haste {T}, Sacrifice Fanatical Firebrand: It deals 1 damage to any target.></text>
+                <text>Haste {T}, Sacrifice Fanatical Firebrand: It deals 1 damage to any target.</text>
                 <set>jmp</set>
                 <legality>
                     <format>Historic</format>
@@ -785,7 +787,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Goblin Warrior</subtype>
                 <power>3</power>
                 <toughness>3</toughness>
-                <text>First strike When Goblin Chainwhirler enters the battlefield, it deals 1 damage to each opponent and each creature and planeswalker they control.></text>
+                <text>First strike When Goblin Chainwhirler enters the battlefield, it deals 1 damage to each opponent and each creature and planeswalker they control.</text>
                 <set>dom</set>
                 <legality>
                     <format>Historic</format>
@@ -821,7 +823,7 @@ You may cast creature spells of the chosen type from the top of your library.></
                 <subtype>Giant // Instant</subtype>
                 <power>4</power>
                 <toughness>3</toughness>
-                <text>undefined></text>
+                <text>undefined</text>
                 <set>clb</set>
                 <legality>
                     <format>Historic</format>
@@ -858,9 +860,9 @@ You may cast creature spells of the chosen type from the top of your library.></
 
 
                 <text>Flash This spell costs {1} less to cast for each attacking creature you control.
-When Embercleave enters the battlefield, attach it to target creature you control.
-Equipped creature gets +1/+1 and has double strike and trample.
-Equip {3}></text>
+                    When Embercleave enters the battlefield, attach it to target creature you control.
+                    Equipped creature gets +1/+1 and has double strike and trample.
+                    Equip {3}</text>
                 <set>kld</set>
                 <legality>
                     <format>Historic</format>
@@ -896,7 +898,7 @@ Equip {3}></text>
                 <subtype>Human Archer Rogue</subtype>
                 <power>2</power>
                 <toughness>2</toughness>
-                <text>Reach, haste Whenever Robber of the Rich attacks, if defending player has more cards in hand than you, exile the top card of their library. During any turn you attacked with a Rogue, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.></text>
+                <text>Reach, haste Whenever Robber of the Rich attacks, if defending player has more cards in hand than you, exile the top card of their library. During any turn you attacked with a Rogue, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.</text>
                 <set>eld</set>
                 <legality>
                     <format>Historic</format>
@@ -932,7 +934,7 @@ Equip {3}></text>
                 <subtype>Dwarf Noble</subtype>
                 <power>2</power>
                 <toughness>4</toughness>
-                <text>If a red source you control would deal damage to an opponent or a permanent an opponent controls, it deals that much damage plus 2 instead.></text>
+                <text>If a red source you control would deal damage to an opponent or a permanent an opponent controls, it deals that much damage plus 2 instead.</text>
                 <set>eld</set>
                 <legality>
                     <format>Historic</format>
@@ -968,7 +970,7 @@ Equip {3}></text>
                 <subtype>Demigod</subtype>
                 <power>*</power>
                 <toughness>3</toughness>
-                <text>Anax's power is equal to your devotion to red. (Each {R} in the mana costs of permanents you control counts toward your devotion to red.) Whenever Anax or another nontoken creature you control dies, create a 1/1 red Satyr creature token with "This creature can't block." If the creature had power 4 or greater, create two of those tokens instead.></text>
+                <text>Anax's power is equal to your devotion to red. (Each {R} in the mana costs of permanents you control counts toward your devotion to red.) Whenever Anax or another nontoken creature you control dies, create a 1/1 red Satyr creature token with "This creature can't block." If the creature had power 4 or greater, create two of those tokens instead.</text>
                 <set>thb</set>
                 <legality>
                     <format>Historic</format>
@@ -1000,7 +1002,7 @@ Equip {3}></text>
 
 
                 <text>If you control two or more other lands, Den of the Bugbear enters the battlefield tapped. {T}: Add {R}.
-{3}{R}: Until end of turn, Den of the Bugbear becomes a 3/2 red Goblin creature with "Whenever this creature attacks, create a 1/1 red Goblin creature token that's tapped and attacking." It's still a land.></text>
+                    {3}{R}: Until end of turn, Den of the Bugbear becomes a 3/2 red Goblin creature with "Whenever this creature attacks, create a 1/1 red Goblin creature token that's tapped and attacking." It's still a land.</text>
                 <set>afr</set>
                 <legality>
                     <format>Historic</format>
@@ -1028,10 +1030,7 @@ Equip {3}></text>
                     <card>https://cards.scryfall.io/large/front/e/b/eb4126a6-5f79-4dad-8d18-e279ca19d2b2.jpg?1654119200</card>
                     <art>https://cards.scryfall.io/art_crop/front/e/b/eb4126a6-5f79-4dad-8d18-e279ca19d2b2.jpg?1654119200</art>
                 </images>
-
-
-                <text>Castle Embereth enters the battlefield tapped unless you control a Mountain. {T}: Add {R}.
-{1}{R}{R}, {T}: Creatures you control get +1/+0 until end of turn.></text>
+                <text>Castle Embereth enters the battlefield tapped unless you control a Mountain. {T}: Add {R}. {1}{R}{R}, {T}: Creatures you control get +1/+0 until end of turn.</text>
                 <set>clb</set>
                 <legality>
                     <format>Historic</format>
