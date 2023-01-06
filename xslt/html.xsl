@@ -100,7 +100,7 @@
                                             <p class="card-text">
                                                 <xsl:value-of select="./text/text()"/>
                                             </p>
-                                            <xsl:if test="./type/text() = 'Creature'">
+                                            <xsl:if test="contains(./type/text(), 'Creature')">
                                                 <div class="card-creature">
                                                     <xsl:value-of select="./power/text()"/> 
                                                     /
