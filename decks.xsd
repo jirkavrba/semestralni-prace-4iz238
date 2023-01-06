@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:dev.vrba:xml:mtg"
-    targetNamespace="urn:dev.vrba:xml:mtg">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://vrba.dev/mtg"
+    targetNamespace="https://vrba.dev/mtg">
     <xs:simpleType name="formatType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Standard" />

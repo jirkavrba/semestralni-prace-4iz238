@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mtg:decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:dev.vrba:xml:mtg decks.xsd" xmlns:mtg="urn:dev.vrba:xml:mtg">
+<mtg:decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://vrba.dev/mtg decks.xsd" xmlns:mtg="https://vrba.dev/mtg">
     <deck>
         <name>Emotional Damage</name>
         <format>Historic</format>
         <colors>
-            <color>Red</color>
             <color>Green</color>
         </colors>
         <stats>

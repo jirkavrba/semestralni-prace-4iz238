@@ -5,8 +5,8 @@
 			"type": "xslt",
 			"label": "XSLT: Transform deccks.xml to HTML",
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
-			"xsltFile": "${file}",
-			"xmlSource": "${file}",
+			"xsltFile": "${workspaceFolder}/xslt/html.xsl",
+			"xmlSource": "${workspaceFolder}/decks.xml",
 			"resultPath": "${workspaceFolder}/output/decks.html",
 			"allowSyntaxExtensions40": "off",
 			"group": {

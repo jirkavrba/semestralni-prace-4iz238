@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mtg="https://vrba.dev/mtg"
+    exclude-result-prefixes="mtg"
+    version="3.0">
+    
+    <xsl:output method="html" version="5" indent="true"/>
+    <xsl:output method="html" version="5" indent="true" name="html5" />
+    
+    <xsl:template match="/" mode="#default">
+        <html lang="en">
+            <head>
+                <title>Magic: The Gathering decks</title>
+                <meta name="og:title" content="Magic: The Gathering decks" />
+                <meta name="og:description" value="This page contains {count(/mtg:decks/deck)} decks"/>
+                <link rel="stylesheet" href="./css/style.css"/>
+            </head>
+            <body>
+                <xsl:for-each select="/mtg:decks/deck">
+                    <section class="deck deck--{lower-case(./colors/color/text())}">
+                        <div class="deck-header">
+                            <div class="deck-info">
+                                <h1 class="deck-name">
+                                    <xsl:value-of select="./name"/>
+                                </h1>
+                                <h2 class="deck-format colored-text">
+                                    <xsl:value-of select="./format/text()"/>
+                                </h2>
+                            </div>
+                            <div class="deck-colors">
+                                <xsl:for-each select="./colors/color">
+                                    <div class="mana mana--large mana--{lower-case(text())}"></div>
+                                </xsl:for-each>
+                            </div>
+                        </div>
+                        
+                        <div class="deck-rarity">
+                            <div class="deck-rarity--common" title="Common"><xsl:value-of select="count(./cards/card/rarity[text() = 'Common'])"/></div>
+                            <div class="deck-rarity--uncommon" title="Uncommon"><xsl:value-of select="count(./cards/card/rarity[text() = 'Uncommon'])"/></div>
+                            <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="count(./cards/card/rarity[text() = 'Rare'])"/></div>
+                            <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="count(./cards/card/rarity[text() = 'Mythic'])"/></div>
+                        </div>
+                    </section>
+                </xsl:for-each> 
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>

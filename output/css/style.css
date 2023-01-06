@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.deck {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid #ffaa00;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 600px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.deck.deck--green {
+    border-color: #9bd3ae;
+}
+
+.deck.deck--blue {
+    border-color: #aae0fa;
+}
+
+.deck.deck--black {
+    border-color: #cbc2bf;
+}
+
+.deck.deck--red {
+    border-color: #f9aa8f;
+}
+
+.deck.deck--white {
+    border-color: #fffbd5;
+}
+
+.deck.deck--green .colored-text {
+    color: #9bd3ae;
+}
+
+.deck.deck--blue .colored-text {
+    color: #aae0fa;
+}
+
+.deck.deck--black .colored-text {
+    color: #cbc2bf;
+}
+
+.deck.deck--red .colored-text {
+    color: #f9aa8f;
+}
+
+.deck.deck--white .colored-text {
+    color: #fffbd5;
+}
+
+.deck .deck-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.deck .deck-header .deck-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.deck .deck-header .deck-info .deck-name {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #27272a
+}
+
+.deck .deck-header .deck-info .deck-format {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.deck .mana {
+    width: 1rem;
+    height: 1rem;
+    background-size: cover;
+}
+
+.deck .mana.mana--large {
+    width: 3rem;
+    height: 3rem;
+}
+
+.deck .mana.mana--green {
+    background: url("../img/g.svg");
+    background-size: cover;
+}
+
+.deck .mana.mana--blue {
+    background: url("../img/u.svg");
+}
+
+.deck .mana.mana--blue {
+    background: url("../img/b.svg");
+}
+
+.deck .mana.mana--red {
+    background: url("../img/r.svg");
+}
+
+.deck .mana.mana--white {
+    background: url("../img/w.svg");
+}
+
+.deck .deck-rarity {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.deck .deck-rarity div {
+    font-size: 1rem;
+    width: 1.5rem;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.deck .deck-rarity .deck-rarity--common {
+    background: #000000;
+    color: #ffffff;
+}
+
+.deck .deck-rarity .deck-rarity--uncommon {
+    background: #d4d4d4;
+    color: #18181b;
+}
+
+.deck .deck-rarity .deck-rarity--rare {
+    background: #facc15;
+    color: #18181b;
+}
+
+.deck .deck-rarity .deck-rarity--mythic {
+    background: #c2410c;
+    color: #ffffff;
+}
