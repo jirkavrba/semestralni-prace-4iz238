@@ -547,6 +547,17 @@ You may cast creature spells of the chosen type from the top of your library.></
         </cards>
     </deck>
     <deck>
+        <name>Monored burn</name>
+        <format>Historic</format>
+        <colors>
+            <color>Red</color>
+        </colors>
+        <stats>
+            <game>
+                <wins>42</wins>
+                <loses>13</loses>
+            </game>
+        </stats>
         <cards>
             <card count="2" id="786baa29-afd4-40f0-95c8-920a972b9175">
                 <name>Kari Zev, Skyship Raider</name>

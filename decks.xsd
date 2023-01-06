@@ -102,8 +102,8 @@
             <xs:element name="type" type="xs:string" />
             <xs:element name="images" type="imagesType" />
             <xs:element name="subtype" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="power" type="xs:integer" minOccurs="0" maxOccurs="1" />
-            <xs:element name="toughness" type="xs:integer" minOccurs="0" maxOccurs="1" />
+            <xs:element name="power" type="powerToughnessType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="toughness" type="powerToughnessType" minOccurs="0" maxOccurs="1" />
             <xs:element name="text" type="xs:string" />
             <!-- TODO: Generate xs:enumeration restriction with valid set names -->
             <xs:element name="set" type="xs:string" />
