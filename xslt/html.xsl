@@ -42,6 +42,51 @@
                             <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="count(./cards/card/rarity[text() = 'Rare'])"/></div>
                             <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="count(./cards/card/rarity[text() = 'Mythic'])"/></div>
                         </div>
+                        
+                        <div class="deck-cards">
+                            <xsl:for-each select="./cards/card">
+                                <div class="deck-card">
+                                    <div class="card-name">
+                                        <span class="card-count colored-text">
+                                            <xsl:value-of select="[@count]"/>x 
+                                        </span>
+                                        <xsl:value-of select="./name/text()"/>
+                                    </div>
+                                    <div class="card-cost">
+                                        <xsl:if test="./cost/colorless/text() > 0">
+                                            <div class="mana mana--colorless">
+                                                <xsl:value-of select="./cost/colorless/text()"/>
+                                            </div>
+                                        </xsl:if>
+
+                                        <xsl:variable name="count" select="./cost/green/text()"/>
+                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                            <div class="mana mana--green"/>
+                                        </xsl:for-each>
+
+                                        <xsl:variable name="count" select="./cost/red/text()"/>
+                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                            <div class="mana mana--red"/>
+                                        </xsl:for-each>
+
+                                        <xsl:variable name="count" select="./cost/blue/text()"/>
+                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                            <div class="mana mana--blue"/>
+                                        </xsl:for-each>
+
+                                        <xsl:variable name="count" select="./cost/black/text()"/>
+                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                            <div class="mana mana--black"/>
+                                        </xsl:for-each>
+
+                                        <xsl:variable name="count" select="./cost/white/text()"/>
+                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                            <div class="mana mana--white"/>
+                                        </xsl:for-each>
+                                    </div>
+                                </div> 
+                            </xsl:for-each>
+                        </div>
                     </section>
                 </xsl:for-each> 
             </body>

@@ -6,12 +6,12 @@
 }
 
 .deck {
-    display: flex;
+    display: inline-flex;
     flex-flow: column nowrap;
     border: 2px solid #ffaa00;
     margin: 1rem;
     padding: 1rem;
-    max-width: 600px;
+    width: 600px;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
@@ -113,6 +113,15 @@
     background: url("../img/w.svg");
 }
 
+.deck .mana.mana--colorless {
+    background: #cccccc;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+}
+
 .deck .deck-rarity {
     display: inline-flex;
     flex-flow: row nowrap;
@@ -122,11 +131,11 @@
 
 .deck .deck-rarity div {
     font-size: 1rem;
-    width: 1.5rem;
     text-align: center;
     font-family: monospace;
     font-weight: bold;
     border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
 }
 
 .deck .deck-rarity .deck-rarity--common {
@@ -147,4 +156,47 @@
 .deck .deck-rarity .deck-rarity--mythic {
     background: #c2410c;
     color: #ffffff;
+}
+
+.deck .deck-card {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #dddddd;
+    border-bottom: none;
+}
+
+.deck .deck-cards .deck-card:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.deck .deck-cards .deck-card:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+    border-bottom: 1px solid #dddddd;
+}
+
+.deck .deck-card .card-name {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #404040;
+}
+
+.deck .deck-card .card-count {
+    width: 2rem;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: right; 
+    margin-right: 0.5rem;
+}
+
+.deck .deck-card .card-cost {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 0.1rem;
 }
