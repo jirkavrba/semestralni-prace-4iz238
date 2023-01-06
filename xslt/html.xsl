@@ -45,6 +45,7 @@
                         
                         <div class="deck-cards">
                             <xsl:for-each select="./cards/card">
+                                <xsl:sort select="sum(./cost/*/text())"/>
                                 <div class="deck-card">
                                     <div class="card-top">
                                         <div class="card-name">
