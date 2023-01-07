@@ -18,6 +18,8 @@
                 <link rel="stylesheet" href="./css/style.css"/>
             </head>
             <body>
+                <a class="back-button" href="./decks.pdf">PDF Export</a>
+
                 <main class="decks">
                     <xsl:for-each select="/mtg:decks/deck">
                         <a class="deck deck--{lower-case(./colors/color[1]/text())}" href="./deck-{position()}.html">
@@ -56,7 +58,7 @@
                                     <link rel="stylesheet" href="./css/style.css"/>
                                 </head>
                                 <body>
-                                    <a class="back-button" href="./index.html">Return back to the decks listings</a>
+                                    <a class="back-button" href="..">Return back to the decks listings</a>
                                     
                                     <main class="deck-page">
                                         <div class="deck deck--large deck--{lower-case(./colors/color[1]/text())}">
