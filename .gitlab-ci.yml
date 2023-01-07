@@ -20,10 +20,6 @@ prepare-tooling-dockerfile:
 validate-xml-schema:
   stage: validate
   image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
-  only:
-    changes:
-      - decks.xsd
-      - decks.xml
   script:
     - xmlstarlet validate decks.xml # Validate source document
     - xmlstarlet validate decks.xsd # Validate schema document
