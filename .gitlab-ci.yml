@@ -45,7 +45,6 @@ transform-xml-to-pdf:
     - fop -xml ./decks.xml -xsl ./xslt/pdf.xsl -pdf ./output/decks.pdf
   only:
     changes:
-      - output
       - xslt/pdf.xsl
       - decks.xml
   artifacts:
