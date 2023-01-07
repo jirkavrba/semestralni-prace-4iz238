@@ -5,7 +5,7 @@
 
 FROM klakegg/saxon
 
-# Download starlet apk
+# Download the latest xmlstarlet apk
 RUN apk add xmlstarlet bash --update
 
 # Remove the apk cache to keep the built docker image tiny
