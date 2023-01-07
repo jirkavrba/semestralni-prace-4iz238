@@ -37,7 +37,7 @@ pages:
   needs:
     - transform-xml-to-html
   script:
-    - cp output public
+    - cp -r output public
   artifacts:
     paths:
       - public
