@@ -3,7 +3,7 @@ import process from "https://deno.land/std@0.165.0/node/process.ts"
 
 const capitalize = (input: string): string => input.charAt(0).toUpperCase() + input.slice(1);
 
-const source = Deno.readTextFileSync("./monored.txt");
+const source = Deno.readTextFileSync("./blue-djinn.txt");
 const parsed = source.split("\n")
   .map((line) => line.trim())
   .filter((line) => line.length > 0)
@@ -22,24 +22,30 @@ const data = await Promise.all(
     )
       .then((response) => response.json())
       .then((response) => {
+        if (!response.image_uris) {
+          console.log(response);
+        }
+
+        const source = response.layout === "transform" ? response.card_faces[0] : response;
+
         return {
           count,
           data: {
             id: response.oracle_id,
-            name: response.name,
-            cost: response.mana_cost,
+            name: source.name,
+            cost: source.mana_cost,
             rarity: response.rarity,
             set: response.set,
-            type: response.type_line,
-            colors: response.colors,
-            text: response.oracle_text,
+            type: source.type_line,
+            colors: source.colors,
+            text: source.oracle_text,
             image: {
-              card: response.image_uris.large,
-              art: response.image_uris.art_crop,
+              card: source.image_uris.large,
+              art: source.image_uris.art_crop,
             },
-            artist: response.artist,
-            power: response.power,
-            toughness: response.toughness,
+            artist: source.artist,
+            power: source.power,
+            toughness: source.toughness,
             legalities: response.legalities,
           },
         };
