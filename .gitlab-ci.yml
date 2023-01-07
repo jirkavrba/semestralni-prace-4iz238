@@ -39,8 +39,14 @@ transform-xml-to-html:
     
 pages:
   stage: publish
+  only:
+    changes:
+      - output
+      - xslt/html.xsl
+      - xslt/pdf.xsl
+      - decks.xml
   needs:
-    - transform
+    - transform-xml-to-html
   script:
     - cp -r output public
   artifacts:
