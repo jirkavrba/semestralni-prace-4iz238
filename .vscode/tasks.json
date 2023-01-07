@@ -25,7 +25,7 @@
 				"-xml", "./decks.xml",
 				"-xsl", "./xslt/pdf.xsl",
 				"-pdf", "./output/decks.pdf",
-				"-c", "./xslt/pdf.config-local.xml",
+				"-c", "./xslt/config/pdf.config-local.xml",
 				"-param", "root", "/home/jirka/code/xml/xslt",
 				"-param", "commit", "vscode-build"
 			],
