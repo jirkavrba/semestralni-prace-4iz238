@@ -40,7 +40,7 @@ transform-xml-to-html:
 pages:
   stage: publish
   needs:
-    - transform-xml-to-html
+    - transform
   script:
     - cp -r output public
   artifacts:
