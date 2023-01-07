@@ -3,15 +3,19 @@ stages:
   # - validate
   # - transform
 
-prepare-xmlstarlet-docker:
+prepare-tooling-dockerfile:
   stage: prepare
   image: docker:stable
   services:
     - docker:dind
   only:
     changes:
-      - tooling/Dockerfile.xmlstarlet
+      - tooling/Dockerfile
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest" - < ./tooling/Dockerfile.xmlstarlet
-    - docker push "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
+    - docker build -t registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling - < ./tooling/Dockerfile.xmlstarlet
+    - docker push registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling
+
+# validate-xml-schema:
+#   stage: validate
+#   image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
