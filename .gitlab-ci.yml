@@ -63,6 +63,7 @@ pages:
       - decks.xml
   needs:
     - transform-xml-to-html
+    - transform-xml-to-pdf
   script:
     - cp -r output public
   artifacts:
