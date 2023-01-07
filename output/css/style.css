@@ -106,11 +106,16 @@
     background: #22c55e;
 }
 
+.decks {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .deck {
     text-decoration: none;
     display: inline-flex;
     flex-flow: column nowrap;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
     padding: 1rem;
     width: 600px;
     border-radius: 0.5rem;
@@ -130,43 +135,48 @@
 }
 
 .deck.deck--green {
-    border-color: #9bd3ae;
+    border-color: #16a34a;
+    background: #dcfce7;
 }
 
 .deck.deck--blue {
-    border-color: #aae0fa;
+    border-color: #3b82f6;
+    background: #e0f2fe;
 }
 
 .deck.deck--black {
-    border-color: #cbc2bf;
+    border-color: #292524;
+    background: #f5f5f5;
 }
 
 .deck.deck--red {
-    border-color: #f9aa8f;
+    border-color: #dc2626;
+    background: #fee2e2;
 }
 
 .deck.deck--white {
-    border-color: #fffbd5;
+    border-color: #fde68a;
+    background: #fffbd5
 }
 
 .deck.deck--green .colored-text {
-    color: #9bd3ae;
+    color: #16a34a;
 }
 
 .deck.deck--blue .colored-text {
-    color: #aae0fa;
+    color: #3b82f6;
 }
 
 .deck.deck--black .colored-text {
-    color: #cbc2bf;
+    color: #292524;
 }
 
 .deck.deck--red .colored-text {
-    color: #f9aa8f;
+    color: #dc2626;
 }
 
 .deck.deck--white .colored-text {
-    color: #fffbd5;
+    color: #fde68a;
 }
 
 .deck .deck-header {
@@ -275,6 +285,7 @@
     padding: 0.5rem;
     border: 1px solid #dddddd;
     border-bottom: none;
+    background: #ffffff;
 }
 
 .deck .deck-cards .deck-card .card-top {
