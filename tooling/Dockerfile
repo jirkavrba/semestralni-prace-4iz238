@@ -3,7 +3,7 @@
 # - Saxon HE for XSLT transformations
 # - XMLStarlet for validating the XML schema
 
-FROM openjdk:21-slim-buster
+FROM openjdk:21-slim
 
 LABEL maintainer="vrbj04@vse.cz"
 
