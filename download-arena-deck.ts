@@ -122,7 +122,7 @@ const transformed = data.map((card) => {
       ? ("<toughness>" + card.data.toughness + "</toughness>")
       : ""
     }
-            <text>${card.data.text?.replace("\n", " ")}></text>
+            <text>${card.data.text?.replace("\n", " ")}</text>
             <set>${card.data.set}</set>
             <legality>${legality}</legality>
             <artist>${card.data.artist}</artist>
