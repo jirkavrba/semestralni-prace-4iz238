@@ -3,11 +3,11 @@
 	"tasks": [
 		{
 			"type": "xslt",
-			"label": "XSLT: Transform deccks.xml to HTML",
+			"label": "XSLT: Transform decks.xml to HTML",
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
 			"xsltFile": "${workspaceFolder}/xslt/html.xsl",
 			"xmlSource": "${workspaceFolder}/decks.xml",
-			"resultPath": "${workspaceFolder}/output/decks.html",
+			"resultPath": "${workspaceFolder}/output/index.html",
 			"allowSyntaxExtensions40": "off",
 			"group": {
 				"kind": "build",

@@ -19,7 +19,7 @@
             </head>
             <body>
                 <xsl:for-each select="/mtg:decks/deck">
-                    <section class="deck deck--{lower-case(./colors/color/text())}">
+                    <a class="deck deck--{lower-case(./colors/color/text())}" href="./deck-{position()}.html">
                         <div class="deck-header">
                             <div class="deck-info">
                                 <h1 class="deck-name">
@@ -42,7 +42,6 @@
                             <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Rare']/@count)"/></div>
                             <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Mythic']/@count)"/></div>
                         </div>
-                        
                         <div class="deck-cards">
                             <xsl:for-each select="./cards/card">
                                 <xsl:sort select="sum(./cost/*/text())"/>
@@ -113,7 +112,15 @@
                                 </div> 
                             </xsl:for-each>
                         </div>
-                    </section>
+                    </a>
+
+                    <xsl:result-document href="deck-{position()}.html">
+                        <html leng="en">
+                            <body>
+                                <xsl:value-of select="./name/text()"/>
+                            </body>
+                        </html> 
+                    </xsl:result-document>
                 </xsl:for-each> 
             </body>
         </html>

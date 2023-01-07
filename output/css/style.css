@@ -6,6 +6,7 @@
 }
 
 .deck {
+    text-decoration: none;
     display: inline-flex;
     flex-flow: column nowrap;
     border: 2px solid #ffaa00;
@@ -14,6 +15,12 @@
     width: 600px;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: 0.3s all;
+    color: inherit;
+}
+
+.deck:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .deck.deck--green {
