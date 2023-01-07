@@ -10,6 +10,7 @@ LABEL maintainer="vrbj04@vse.cz"
 RUN apt update
 RUN apt install -y unzip
 RUN apt install -y xmlstarlet
+RUN apt install -y fop
 
 ADD https://netix.dl.sourceforge.net/project/saxon/Saxon-HE/11/Java/SaxonHE11-4J.zip /tmp/saxon.zip
 
