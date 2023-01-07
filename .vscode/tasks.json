@@ -16,6 +16,20 @@
 			"problemMatcher": [
 				"$saxon-xslt"
 			]
+		},
+		{
+			"type": "shell",
+			"label": "XSLT: Transform decks.xml to PDF",
+			"command": "fop",
+			"args": [
+				"-xml", "./decks.xml",
+				"-xsl", "./xslt/pdf.xsl",
+				"-pdf", "./output/decks.pdf"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 		}
 	]
 }
