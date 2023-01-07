@@ -52,37 +52,8 @@
 
     <xs:simpleType name="setType">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="2x2" />
-            <xs:enumeration value="2xm" />
-            <xs:enumeration value="aer" />
-            <xs:enumeration value="afr" />
-            <xs:enumeration value="akh" />
-            <xs:enumeration value="bro" />
-            <xs:enumeration value="clb" />
-            <xs:enumeration value="c18" />
-            <xs:enumeration value="dom" />
-            <xs:enumeration value="dmc" />
-            <xs:enumeration value="dtk" />
-            <xs:enumeration value="eld" />
-            <xs:enumeration value="gnt" />
-            <xs:enumeration value="grn" />
-            <xs:enumeration value="hou" />
-            <xs:enumeration value="iko" />
-            <xs:enumeration value="jmp" />
-            <xs:enumeration value="j21" />
-            <xs:enumeration value="kld" />
-            <xs:enumeration value="khc" />
-            <xs:enumeration value="khm" />
-            <xs:enumeration value="m19" />
-            <xs:enumeration value="m20" />
-            <xs:enumeration value="m21" />
-            <xs:enumeration value="rix" />
-            <xs:enumeration value="rna" />
-            <xs:enumeration value="thb" />
-            <xs:enumeration value="w17" />
-            <xs:enumeration value="war" />
-            <xs:enumeration value="xln" />
-            <xs:enumeration value="znr" />
+            <xs:length value="3"/>
+            <xs:pattern value="[a-z0-9]+"/>
         </xs:restriction>
     </xs:simpleType>
 

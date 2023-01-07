@@ -3,7 +3,7 @@ import process from "https://deno.land/std@0.165.0/node/process.ts"
 
 const capitalize = (input: string): string => input.charAt(0).toUpperCase() + input.slice(1);
 
-const source = Deno.readTextFileSync("./blue-djinn.txt");
+const source = Deno.readTextFileSync("./source.txt");
 const parsed = source.split("\n")
   .map((line) => line.trim())
   .filter((line) => line.length > 0)
@@ -22,10 +22,6 @@ const data = await Promise.all(
     )
       .then((response) => response.json())
       .then((response) => {
-        if (!response.image_uris) {
-          console.log(response);
-        }
-
         const source = response.layout === "transform" ? response.card_faces[0] : response;
 
         return {

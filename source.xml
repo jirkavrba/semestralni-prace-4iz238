@@ -1,0 +1,810 @@
+<deck>
+    <name>Selesnya Enchantments</name>
+    <format>Standard</format>
+    <colors>
+        <color>Green</color>
+        <color>White</color>
+    </colors>
+    <stats>
+        <game>
+            <loses>2</loses>
+            <wins>10</wins>
+        </game>
+    </stats>
+    <cards>
+        <card count="3" id="0629747e-8dd8-4150-95ee-9d860264ccb0">
+            <name>Generous Visitor</name>
+            <colors>
+                <color>Green</color>
+            </colors>
+            <rarity>Uncommon</rarity>
+            <cost>
+                <green>1</green>
+            </cost>
+            <type>Creature</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/d/1/d1066ccd-a932-4d05-98da-11ae4675364e.jpg?1654568092</card>
+                <art>https://cards.scryfall.io/art_crop/front/d/1/d1066ccd-a932-4d05-98da-11ae4675364e.jpg?1654568092</art>
+            </images>
+            <subtype>Spirit</subtype>
+            <power>1</power>
+            <toughness>1</toughness>
+            <text>Whenever you cast an enchantment spell, put a +1/+1 counter on target creature.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Penny</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Iris Compiet</artist>
+        </card>
+
+
+        <card count="7" id="bc71ebf6-2056-41f7-be35-b2e5c34afa99">
+            <name>Plains</name>
+            <colors></colors>
+            <rarity>Common</rarity>
+            <cost></cost>
+            <type>Basic Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/d/b/db14da86-6721-4e22-9b61-4a5680d4e5a3.jpg?1670974958</card>
+                <art>https://cards.scryfall.io/art_crop/front/d/b/db14da86-6721-4e22-9b61-4a5680d4e5a3.jpg?1670974958</art>
+            </images>
+            <subtype>Plains</subtype>
+
+
+            <text>({T}: Add {W}.)</text>
+            <set>one</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Pauper</format>
+                <format>Vintage</format>
+                <format>Penny</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Paupercommander</format>
+                <format>Duel</format>
+                <format>Premodern</format>
+            </legality>
+            <artist>Sergey Glushakov</artist>
+        </card>
+
+
+        <card count="4" id="9c5f0d91-9d86-4e66-94fd-4af93ad01838">
+            <name>Spirited Companion</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Common</rarity>
+            <cost>
+                <colorless>1</colorless>
+                <white>1</white>
+            </cost>
+            <type>Enchantment Creature</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/5/a/5aa91a9e-2fe2-43bc-aa9c-cfb8a71829ff.jpg?1654566520</card>
+                <art>https://cards.scryfall.io/art_crop/front/5/a/5aa91a9e-2fe2-43bc-aa9c-cfb8a71829ff.jpg?1654566520</art>
+            </images>
+            <subtype>Dog</subtype>
+            <power>1</power>
+            <toughness>1</toughness>
+            <text>When Spirited Companion enters the battlefield, draw a card.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Pauper</format>
+                <format>Vintage</format>
+                <format>Penny</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Paupercommander</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Ilse Gort</artist>
+        </card>
+
+
+        <card count="2" id="9d9b52b2-2edc-4f7f-a8d9-e024b1398847">
+            <name>The Restoration of Eiganjo</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Rare</rarity>
+            <cost>
+                <colorless>2</colorless>
+                <white>1</white>
+            </cost>
+            <type>Enchantment</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/a/1/a11a33ae-e7fa-4bd4-8cd8-3a3239a29bcc.jpg?1656453098</card>
+                <art>https://cards.scryfall.io/art_crop/front/a/1/a11a33ae-e7fa-4bd4-8cd8-3a3239a29bcc.jpg?1656453098</art>
+            </images>
+            <subtype>Saga</subtype>
+
+
+            <text>(As this Saga enters and after your draw step, add a lore counter.) I — Search
+                your
+                library
+                for a basic Plains card, reveal it, put it into your hand, then shuffle.
+                II — You may discard a card. When you do, return target permanent card with mana
+                value 2 or
+                less
+                from your graveyard to the battlefield tapped.
+                III — Exile this Saga, then return it to the battlefield transformed under your
+                control.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Titus Lunter</artist>
+        </card>
+
+
+        <card count="4" id="c4d1a78f-0cca-4042-862c-8f322ee25d50">
+            <name>Jukai Naturalist</name>
+            <colors>
+                <color>Green</color>
+                <color>White</color>
+            </colors>
+            <rarity>Uncommon</rarity>
+            <cost>
+                <green>1</green>
+                <white>1</white>
+            </cost>
+            <type>Enchantment Creature</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/5/3/5366900b-2abf-4e5c-8507-f51aca9c7ce8.jpg?1654568491</card>
+                <art>https://cards.scryfall.io/art_crop/front/5/3/5366900b-2abf-4e5c-8507-f51aca9c7ce8.jpg?1654568491</art>
+            </images>
+            <subtype>Human Monk</subtype>
+            <power>2</power>
+            <toughness>2</toughness>
+            <text>Lifelink Enchantment spells you cast cost {1} less to cast.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Penny</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Anna Steinbauer</artist>
+        </card>
+
+
+        <card count="5" id="b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6">
+            <name>Forest</name>
+            <colors></colors>
+            <rarity>Common</rarity>
+            <cost></cost>
+            <type>Basic Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/9/f/9f9e911e-7e12-4d99-806c-5cfba19ea8f3.jpg?1670945627</card>
+                <art>https://cards.scryfall.io/art_crop/front/9/f/9f9e911e-7e12-4d99-806c-5cfba19ea8f3.jpg?1670945627</art>
+            </images>
+            <subtype>Forest</subtype>
+
+
+            <text>({T}: Add {G}.)</text>
+            <set>one</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Pauper</format>
+                <format>Vintage</format>
+                <format>Penny</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Paupercommander</format>
+                <format>Duel</format>
+                <format>Premodern</format>
+            </legality>
+            <artist>Nadia Hurianova</artist>
+        </card>
+
+
+        <card count="3" id="e310ab58-180e-4840-bc8d-9f9b06f1b478">
+            <name>Hallowed Haunting</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Mythic</rarity>
+            <cost>
+                <colorless>2</colorless>
+                <white>2</white>
+            </cost>
+            <type>Enchantment</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/6/7/674c0a50-9c37-4c29-84d8-eb3e34f34d37.jpg?1643586385</card>
+                <art>https://cards.scryfall.io/art_crop/front/6/7/674c0a50-9c37-4c29-84d8-eb3e34f34d37.jpg?1643586385</art>
+            </images>
+
+
+            <text>As long as you control seven or more enchantments, creatures you control have
+                flying and
+                vigilance. Whenever you cast an enchantment spell, create a white Spirit Cleric
+                creature token
+                with "This creature's power and toughness are each equal to the number of Spirits
+                you
+                control."</text>
+            <set>vow</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>David Auden Nash</artist>
+        </card>
+
+
+        <card count="4" id="709d2f10-1585-48c3-9058-ddd5f62f0452">
+            <name>Overgrown Farmland</name>
+            <colors></colors>
+            <rarity>Rare</rarity>
+            <cost></cost>
+            <type>Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/8/4/84a76e0f-49fc-4087-8859-98f4a4deacdf.jpg?1655879808</card>
+                <art>https://cards.scryfall.io/art_crop/front/8/4/84a76e0f-49fc-4087-8859-98f4a4deacdf.jpg?1655879808</art>
+            </images>
+
+
+            <text>Overgrown Farmland enters the battlefield tapped unless you control two or more
+                other
+                lands.
+                {T}: Add {G} or {W}.</text>
+            <set>mid</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Jonas De Ro</artist>
+        </card>
+
+
+        <card count="1" id="7edb3d15-4f70-4ebe-8c5e-caf6a225076d">
+            <name>Eiganjo, Seat of the Empire</name>
+            <colors></colors>
+            <rarity>Rare</rarity>
+            <cost></cost>
+            <type>Legendary Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/c/3/c375a022-5b57-496d-a802-e4ea8376e9e4.jpg?1654568932</card>
+                <art>https://cards.scryfall.io/art_crop/front/c/3/c375a022-5b57-496d-a802-e4ea8376e9e4.jpg?1654568932</art>
+            </images>
+
+
+            <text>{T}: Add {W}. Channel — {2}{W}, Discard Eiganjo, Seat of the Empire: It deals 4
+                damage to
+                target attacking or blocking creature. This ability costs {1} less to activate for
+                each
+                legendary creature you control.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Julian Kok Joon Wen</artist>
+        </card>
+
+
+        <card count="1" id="bf1341dd-41a3-49f6-87ec-63170dde4324">
+            <name>Boseiju, Who Endures</name>
+            <colors></colors>
+            <rarity>Rare</rarity>
+            <cost></cost>
+            <type>Legendary Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/2/1/2135ac5a-187b-4dc9-8f82-34e8d1603416.jpg?1654568912</card>
+                <art>https://cards.scryfall.io/art_crop/front/2/1/2135ac5a-187b-4dc9-8f82-34e8d1603416.jpg?1654568912</art>
+            </images>
+
+
+            <text>{T}: Add {G}. Channel — {1}{G}, Discard Boseiju, Who Endures: Destroy target
+                artifact,
+                enchantment, or nonbasic land an opponent controls. That player may search their
+                library for a
+                land card with a basic land type, put it onto the battlefield, then shuffle. This
+                ability
+                costs
+                {1} less to activate for each legendary creature you control.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Chris Ostrowski</artist>
+        </card>
+
+
+        <card count="2" id="94794f7c-62e7-43c8-ba7f-ac5c0bc9a712">
+            <name>Michiko's Reign of Truth</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Uncommon</rarity>
+            <cost>
+                <colorless>1</colorless>
+                <white>1</white>
+            </cost>
+            <type>Enchantment</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/7/4/74f12c23-5c15-4ae6-8f4d-c5e6c1878817.jpg?1656453078</card>
+                <art>https://cards.scryfall.io/art_crop/front/7/4/74f12c23-5c15-4ae6-8f4d-c5e6c1878817.jpg?1656453078</art>
+            </images>
+            <subtype>Saga</subtype>
+
+
+            <text>(As this Saga enters and after your draw step, add a lore counter.) I, II — Target
+                creature
+                gets +1/+1 until end of turn for each artifact and/or enchantment you control.
+                III — Exile this Saga, then return it to the battlefield transformed under your
+                control.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Penny</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Volkan Baǵa</artist>
+        </card>
+
+
+        <card count="3" id="259ac30c-cc05-4c04-9b23-71283f84b808">
+            <name>Wedding Announcement</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Rare</rarity>
+            <cost>
+                <colorless>2</colorless>
+                <white>1</white>
+            </cost>
+            <type>Enchantment</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/2/c/2c3ddb1f-a1de-4fea-9042-5e9caa16ceb2.jpg?1643587382</card>
+                <art>https://cards.scryfall.io/art_crop/front/2/c/2c3ddb1f-a1de-4fea-9042-5e9caa16ceb2.jpg?1643587382</art>
+            </images>
+
+
+            <text>At the beginning of your end step, put an invitation counter on Wedding
+                Announcement. If
+                you
+                attacked with two or more creatures this turn, draw a card. Otherwise, create a 1/1
+                white
+                Human
+                creature token. Then if Wedding Announcement has three or more invitation counters
+                on it,
+                transform it.</text>
+            <set>vow</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Caroline Gariba</artist>
+        </card>
+
+
+        <card count="2" id="493b2820-c250-48bd-9f3c-e1b5639ee101">
+            <name>Katilda, Dawnhart Martyr</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Rare</rarity>
+            <cost>
+                <colorless>1</colorless>
+                <white>2</white>
+            </cost>
+            <type>Legendary Creature</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/0/e/0ef240aa-2a88-4ec4-888a-918466372adb.jpg?1643586518</card>
+                <art>https://cards.scryfall.io/art_crop/front/0/e/0ef240aa-2a88-4ec4-888a-918466372adb.jpg?1643586518</art>
+            </images>
+            <subtype>Spirit Warlock</subtype>
+            <power>*</power>
+            <toughness>*</toughness>
+            <text>Flying, lifelink, protection from Vampires Katilda, Dawnhart Martyr's power and
+                toughness
+                are each equal to the number of permanents you control that are Spirits and/or
+                enchantments.
+                Disturb {3}{W}{W} (You may cast this card from your graveyard transformed for its
+                disturb
+                cost.)</text>
+            <set>vow</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Manuel Castañón</artist>
+        </card>
+
+
+        <card count="4" id="f1ac4e0e-5633-46e4-9a21-d3924e481d13">
+            <name>Borrowed Time</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Uncommon</rarity>
+            <cost>
+                <colorless>2</colorless>
+                <white>1</white>
+            </cost>
+            <type>Enchantment</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/3/e/3eeef24b-b937-408e-a32e-1a546d3e7b0f.jpg?1634346590</card>
+                <art>https://cards.scryfall.io/art_crop/front/3/e/3eeef24b-b937-408e-a32e-1a546d3e7b0f.jpg?1634346590</art>
+            </images>
+
+            <text>When Borrowed Time enters the battlefield, exile target nonland permanent an
+                opponent
+                controls until Borrowed Time leaves the battlefield.</text>
+            <set>mid</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Andreas Zafiratos</artist>
+        </card>
+
+
+        <card count="2" id="d1cd7a93-4b83-4755-90bc-17cb64bfb131">
+            <name>Circle of Confinement</name>
+            <colors>
+                <color>White</color>
+            </colors>
+            <rarity>Uncommon</rarity>
+            <cost>
+                <colorless>1</colorless>
+                <white>1</white>
+            </cost>
+            <type>Enchantment</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/1/3/13031fb6-9d5a-4add-9a86-28b2a9373fd2.jpg?1643585961</card>
+                <art>https://cards.scryfall.io/art_crop/front/1/3/13031fb6-9d5a-4add-9a86-28b2a9373fd2.jpg?1643585961</art>
+            </images>
+
+
+            <text>When Circle of Confinement enters the battlefield, exile target creature an
+                opponent
+                controls with mana value 3 or less until Circle of Confinement leaves the
+                battlefield.
+                Whenever
+                an opponent casts a Vampire spell with the same name as a card exiled with Circle of
+                Confinement, you gain 2 life.</text>
+            <set>vow</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Lorenzo Mastroianni</artist>
+        </card>
+
+
+        <card count="4" id="494b31b2-27ef-4ca1-ac72-c2fcfc8a23a1">
+            <name>Weaver of Harmony</name>
+            <colors>
+                <color>Green</color>
+            </colors>
+            <rarity>Rare</rarity>
+            <cost>
+                <colorless>1</colorless>
+                <green>1</green>
+            </cost>
+            <type>Enchantment Creature</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/d/1/d1682673-e947-44e2-b9c9-cbcb9a16892b.jpg?1654568377</card>
+                <art>https://cards.scryfall.io/art_crop/front/d/1/d1682673-e947-44e2-b9c9-cbcb9a16892b.jpg?1654568377</art>
+            </images>
+            <subtype>Snake Druid</subtype>
+            <power>2</power>
+            <toughness>2</toughness>
+            <text>Other enchantment creatures you control get +1/+1. {G}, {T}: Copy target activated
+                or
+                triggered ability you control from an enchantment source. You may choose new targets
+                for the
+                copy. (Mana abilities can't be targeted.)</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Tuan Duong Chu</artist>
+        </card>
+
+
+        <card count="2" id="3123ec89-8e95-4761-ba17-747ec667509f">
+            <name>Spara's Headquarters</name>
+            <colors></colors>
+            <rarity>Rare</rarity>
+            <cost></cost>
+            <type>Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/7/3/7363f1fb-9af3-4212-921f-d59533faf0e5.jpg?1664414585</card>
+                <art>https://cards.scryfall.io/art_crop/front/7/3/7363f1fb-9af3-4212-921f-d59533faf0e5.jpg?1664414585</art>
+            </images>
+            <subtype>Forest Plains Island</subtype>
+
+
+            <text>({T}: Add {G}, {W}, or {U}.) Spara's Headquarters enters the battlefield tapped.
+                Cycling {3} ({3}, Discard this card: Draw a card.)</text>
+            <set>snc</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Kieran Yanner</artist>
+        </card>
+
+
+        <card count="4" id="7baffe00-78a4-4675-9c74-29eb3882bd01">
+            <name>Kami of Transience</name>
+            <colors>
+                <color>Green</color>
+            </colors>
+            <rarity>Rare</rarity>
+            <cost>
+                <colorless>1</colorless>
+                <green>1</green>
+            </cost>
+            <type>Creature</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/7/d/7d038a59-e589-45f4-b5ef-6d2f9875d560.jpg?1654568218</card>
+                <art>https://cards.scryfall.io/art_crop/front/7/d/7d038a59-e589-45f4-b5ef-6d2f9875d560.jpg?1654568218</art>
+            </images>
+            <subtype>Spirit</subtype>
+            <power>2</power>
+            <toughness>2</toughness>
+            <text>Trample Whenever you cast an enchantment spell, put a +1/+1 counter on Kami of
+                Transience.
+                At the beginning of each end step, if an enchantment was put into your graveyard
+                from the
+                battlefield this turn, you may return Kami of Transience from your graveyard to your
+                hand.</text>
+            <set>neo</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+            </legality>
+            <artist>Steve Prescott</artist>
+        </card>
+
+
+        <card count="3" id="5eb8b497-ec9a-4a89-ad29-1ec3ca82da7c">
+            <name>Brushland</name>
+            <colors></colors>
+            <rarity>Rare</rarity>
+            <cost></cost>
+            <type>Land</type>
+            <images>
+                <card>https://cards.scryfall.io/large/front/1/8/18d236ce-3b78-403a-b5f9-4fb44123d85b.jpg?1670539694</card>
+                <art>https://cards.scryfall.io/art_crop/front/1/8/18d236ce-3b78-403a-b5f9-4fb44123d85b.jpg?1670539694</art>
+            </images>
+
+
+            <text>{T}: Add {C}. {T}: Add {G} or {W}. Brushland deals 1 damage to you.</text>
+            <set>bro</set>
+            <legality>
+                <format>Standard</format>
+                <format>Future</format>
+                <format>Historic</format>
+                <format>Gladiator</format>
+                <format>Pioneer</format>
+                <format>Explorer</format>
+                <format>Modern</format>
+                <format>Legacy</format>
+                <format>Vintage</format>
+                <format>Commander</format>
+                <format>Brawl</format>
+                <format>Historicbrawl</format>
+                <format>Alchemy</format>
+                <format>Duel</format>
+                <format>Premodern</format>
+            </legality>
+            <artist>Thomas Stoop</artist>
+        </card>
+    </cards>
+</deck>

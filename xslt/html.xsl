@@ -19,7 +19,7 @@
             </head>
             <body>
                 <xsl:for-each select="/mtg:decks/deck">
-                    <a class="deck deck--{lower-case(./colors/color/text())}" href="./deck-{position()}.html">
+                    <a class="deck deck--{lower-case(./colors/color[1]/text())}" href="./deck-{position()}.html">
                         <div class="deck-header">
                             <div class="deck-info">
                                 <h1 class="deck-name">
@@ -58,7 +58,7 @@
                                 <a class="back-button" href="./index.html">Return back to the decks listings</a>
                                 
                                 <main class="deck-page">
-                                    <div class="deck deck--large deck--{lower-case(./colors/color/text())}">
+                                    <div class="deck deck--large deck--{lower-case(./colors/color[1]/text())}">
                                         <div class="deck-header">
                                             <div class="deck-info">
                                                 <h1 class="deck-name">
