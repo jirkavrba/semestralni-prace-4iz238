@@ -5,11 +5,30 @@
     padding: 0;
 }
 
+.back-button {
+    display: inline-block;
+    margin: 1rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #262626;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.01rem;
+    color: #262626;
+    transition: 0.3s all;
+}
+
+.back-button:hover {
+    background: #262626;
+    color: #ffffff;
+}
+
 .deck {
     text-decoration: none;
     display: inline-flex;
     flex-flow: column nowrap;
-    border: 2px solid #ffaa00;
     margin: 1rem;
     padding: 1rem;
     width: 600px;
@@ -17,10 +36,16 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     transition: 0.3s all;
     color: inherit;
+    border: 2px solid #262626;
 }
 
 .deck:hover {
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.deck.deck--large {
+    display: flex;
+    width: max(50vw, 800px);
 }
 
 .deck.deck--green {
@@ -165,13 +190,17 @@
     color: #ffffff;
 }
 
-.deck .deck-card {
+.deck .deck-cards {
+    margin-top: 1rem;
+}
+
+.deck .deck-cards .deck-card {
     padding: 0.5rem;
     border: 1px solid #dddddd;
     border-bottom: none;
 }
 
-.deck .deck-card .card-top {
+.deck .deck-cards .deck-card .card-top {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -212,16 +241,20 @@
 }
 
 .deck .deck-card .card-details {
-    display: none;
-    padding: 1rem;
-    padding-left: 2.5rem;
-}
-
-.deck .deck-card:hover .card-details {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    overflow: hidden;
+    height: 0px;
+    padding-left: 2.5rem;
+    transition: 0.3s all;
+}
+
+.deck .deck-card:hover .card-details {
+    height: 200px;
+    padding: 1rem;
+    padding-left: 4rem;
 }
 
 .deck .deck-card:hover {

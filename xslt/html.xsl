@@ -42,82 +42,109 @@
                             <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Rare']/@count)"/></div>
                             <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Mythic']/@count)"/></div>
                         </div>
-                        <div class="deck-cards">
-                            <xsl:for-each select="./cards/card">
-                                <xsl:sort select="sum(./cost/*/text())"/>
-                                <div class="deck-card">
-                                    <div class="card-top">
-                                        <div class="card-name">
-                                            <span class="card-count colored-text">
-                                                <xsl:value-of select="[@count]"/>x 
-                                            </span>
-                                            <xsl:value-of select="./name/text()"/>
-                                            
-                                        </div>
-                                        <div class="card-cost">
-                                            <xsl:if test="./cost/colorless/text() > 0">
-                                                <div class="mana mana--colorless">
-                                                    <xsl:value-of select="./cost/colorless/text()"/>
-                                                </div>
-                                            </xsl:if>
-                                            
-                                            <xsl:variable name="count" select="./cost/green/text()"/>
-                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                <div class="mana mana--green"/>
-                                            </xsl:for-each>
-                                            
-                                            <xsl:variable name="count" select="./cost/red/text()"/>
-                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                <div class="mana mana--red"/>
-                                            </xsl:for-each>
-                                            
-                                            <xsl:variable name="count" select="./cost/blue/text()"/>
-                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                <div class="mana mana--blue"/>
-                                            </xsl:for-each>
-                                            
-                                            <xsl:variable name="count" select="./cost/black/text()"/>
-                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                <div class="mana mana--black"/>
-                                            </xsl:for-each>
-                                            
-                                            <xsl:variable name="count" select="./cost/white/text()"/>
-                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                <div class="mana mana--white"/>
-                                            </xsl:for-each>
-                                        </div>
-                                    </div>
-                                    <div class="card-details">
-                                        <div class="card-information">
-                                            <div class="card-subtype">
-                                                <xsl:value-of select="./type/text()"/>
-                                                <xsl:if test="./subtype/text()">
-                                                    -    
-                                                    <xsl:value-of select="./subtype/text()"/>
-                                                </xsl:if>
-                                            </div>
-                                            <p class="card-text">
-                                                <xsl:value-of select="./text/text()"/>
-                                            </p>
-                                            <xsl:if test="contains(./type/text(), 'Creature')">
-                                                <div class="card-creature">
-                                                    <xsl:value-of select="./power/text()"/> 
-                                                    /
-                                                    <xsl:value-of select="./toughness/text()"/>
-                                                </div>
-                                            </xsl:if>
-                                        </div>
-                                        <img class="card-image" src="{./images/art/text()}" alt="{./name/text()} image" title="{./artist/text()}"/>
-                                    </div>
-                                </div> 
-                            </xsl:for-each>
-                        </div>
                     </a>
-
+                    
                     <xsl:result-document href="deck-{position()}.html">
+                        <xsl:variable name="cards" select="sum(./cards/card/@count)"/>
                         <html leng="en">
+                            <head>
+                                <title><xsl:value-of select="./name/text()"/> | Magic: The Gathering decks</title>
+                                <meta name="description" value="This deck contains {$cards} cards"/>
+                                <meta name="og:title" content="{./name/text()} | Magic: The Gathering decks" />
+                                <meta name="og:description" value="This deck contains {$cards} cards"/>
+                                <link rel="stylesheet" href="./css/style.css"/>
+                            </head>
                             <body>
-                                <xsl:value-of select="./name/text()"/>
+                                <a class="back-button" href="./index.html">Return back to the decks listings</a>
+
+                                <div class="deck deck--large deck--{lower-case(./colors/color/text())}">
+                                    <div class="deck-header">
+                                        <div class="deck-info">
+                                            <h1 class="deck-name">
+                                                <xsl:value-of select="./name"/>
+                                            </h1>
+                                            <h2 class="deck-format colored-text">
+                                                <xsl:value-of select="./format/text()"/>
+                                            </h2>
+                                        </div>
+                                        <div class="deck-colors">
+                                            <xsl:for-each select="./colors/color">
+                                                <div class="mana mana--large mana--{lower-case(text())}"></div>
+                                            </xsl:for-each>
+                                        </div>
+                                    </div>
+
+                                    <div class="deck-cards">
+                                        <xsl:for-each select="./cards/card">
+                                            <xsl:sort select="sum(./cost/*/text())"/>
+                                            <div class="deck-card">
+                                                <div class="card-top">
+                                                    <div class="card-name">
+                                                        <span class="card-count colored-text">
+                                                            <xsl:value-of select="[@count]"/>x 
+                                                        </span>
+                                                        <xsl:value-of select="./name/text()"/>
+                                                        
+                                                    </div>
+                                                    <div class="card-cost">
+                                                        <xsl:if test="./cost/colorless/text() > 0">
+                                                            <div class="mana mana--colorless">
+                                                                <xsl:value-of select="./cost/colorless/text()"/>
+                                                            </div>
+                                                        </xsl:if>
+                                                        
+                                                        <xsl:variable name="count" select="./cost/green/text()"/>
+                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                            <div class="mana mana--green"/>
+                                                        </xsl:for-each>
+                                                        
+                                                        <xsl:variable name="count" select="./cost/red/text()"/>
+                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                            <div class="mana mana--red"/>
+                                                        </xsl:for-each>
+                                                        
+                                                        <xsl:variable name="count" select="./cost/blue/text()"/>
+                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                            <div class="mana mana--blue"/>
+                                                        </xsl:for-each>
+                                                        
+                                                        <xsl:variable name="count" select="./cost/black/text()"/>
+                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                            <div class="mana mana--black"/>
+                                                        </xsl:for-each>
+                                                        
+                                                        <xsl:variable name="count" select="./cost/white/text()"/>
+                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                            <div class="mana mana--white"/>
+                                                        </xsl:for-each>
+                                                    </div>
+                                                </div>
+                                                <div class="card-details">
+                                                    <div class="card-information">
+                                                        <div class="card-subtype">
+                                                            <xsl:value-of select="./type/text()"/>
+                                                            <xsl:if test="./subtype/text()">
+                                                                -    
+                                                                <xsl:value-of select="./subtype/text()"/>
+                                                            </xsl:if>
+                                                        </div>
+                                                        <p class="card-text">
+                                                            <xsl:value-of select="./text/text()"/>
+                                                        </p>
+                                                        <xsl:if test="contains(./type/text(), 'Creature')">
+                                                            <div class="card-creature">
+                                                                <xsl:value-of select="./power/text()"/> 
+                                                                /
+                                                                <xsl:value-of select="./toughness/text()"/>
+                                                            </div>
+                                                        </xsl:if>
+                                                    </div>
+                                                    <img class="card-image" src="{./images/art/text()}" alt="{./name/text()} image" title="{./artist/text()}"/>
+                                                </div>
+                                            </div> 
+                                        </xsl:for-each>
+                                    </div>
+                                </div>
                             </body>
                         </html> 
                     </xsl:result-document>
