@@ -8,29 +8,62 @@
     version="3.0">
     
     <xsl:output method="xml"/>
-
+    
     <xsl:param name="root">/</xsl:param>
+    <xsl:param name="commit">dev</xsl:param>
     
     <xsl:template match="/">
         <fo:root>
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="default-page" page-height="297mm" page-width="210mm" margin="1in">
+                <fo:simple-page-master master-name="first-page" page-height="297mm" page-width="210mm" margin="1.5in">
+                    <fo:region-body />
+                    <fo:region-after extent="10mm"/>
+                </fo:simple-page-master>
+                
+                <fo:simple-page-master master-name="deck-page" page-height="297mm" page-width="210mm" margin="1in">
                     <fo:region-body margin-bottom="15mm"/>
-                    <fo:region-after extent="10mm"/>my
+                    <fo:region-after extent="10mm"/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
-            <xsl:for-each select="/mtg:decks/deck">
-                <fo:page-sequence master-reference="default-page">
-                    <fo:static-content flow-name="xsl-region-after">
-                        <fo:block text-align="left">
-                            <fo:basic-link external-destination="https://gitlab.com/jirkavrba/semestralni-prace-4iz238">
-                                Source code on Gitlab 
+            <fo:page-sequence master-reference="first-page">
+                <fo:static-content flow-name="xsl-region-after">
+                    <fo:block font-size="10pt">
+                        Version 
+                        <fo:basic-link external-destination="https://gitlab.com/jirkavrba/semestralni-prace-4iz238/-/commit/{$commit}">
+                            <fo:inline font-family="monospace" font-weight="bold"><xsl:value-of select="$commit"/></fo:inline>
+                        </fo:basic-link>
+                    </fo:block>
+                </fo:static-content>
+                <fo:flow flow-name="xsl-region-body">
+                    <fo:block font-size="24pt" font-weight="bold">Magic: The Gathering decks</fo:block>
+                    <fo:block font-size="20pt" font-family="Noto Sans" font-weight="bold" space-before="6pt" space-after="4pt">Jiří Vrba</fo:block>
+
+                    <fo:block font-size="12pt" space-before="60pt" space-after="8pt" font-weight="bold">
+                        This export contains <xsl:value-of select="count(/mtg:decks/deck)"/> decks
+                    </fo:block>
+
+
+                    <xsl:for-each select="/mtg:decks/deck">
+                        <fo:block font-size="14pt">
+                            <fo:basic-link internal-destination="deck-{position()}">
+                                <xsl:value-of select="./name/text()"/>
                             </fo:basic-link>
                         </fo:block>
+                    </xsl:for-each>
+                </fo:flow>
+            </fo:page-sequence>
+            <xsl:for-each select="/mtg:decks/deck">
+                <fo:page-sequence master-reference="deck-page">
+                    <fo:title>
+                        <xsl:value-of select="./name/text()"/>
+                    </fo:title>
+                    <fo:static-content flow-name="xsl-region-after">
+                        <fo:block text-align="left">
+                            Page <fo:page-number/>
+                        </fo:block>
                     </fo:static-content>
-                    <fo:flow flow-name="xsl-region-body">
-                        <fo:block text-align="left" space-before="20pt" space-after="14pt" font-family="Helvetica">
-                            <fo:block font-size="12pt" font-weight="bold">Magic: The Gathering decks</fo:block>
+                    <fo:flow flow-name="xsl-region-body" id="deck-{position()}">
+                        <fo:block text-align="left" space-before="20pt" space-after="14pt" font-family="sans-serif">
                             <fo:block font-size="24pt" font-weight="bold" space-before="6pt" space-after="4pt">
                                 <xsl:value-of select="./name/text()"/>
                             </fo:block>

@@ -45,7 +45,7 @@ transform-xml-to-pdf:
     - validate-xml-schema
   script:
     - rm -f output/*.pdf
-    - fop -xml ./decks.xml -xsl ./xslt/pdf.xsl -pdf ./output/decks.pdf -param root "$(pwd)/xslt"
+    - fop -xml ./decks.xml -xsl ./xslt/pdf.xsl -pdf ./output/decks.pdf -param root "$(pwd)/xslt" -param comit $CI_COMMIT_SHORT_SHA -c ./xslt/pdf.config.xml
   artifacts:
     expire_in: 1 hour
     paths:
