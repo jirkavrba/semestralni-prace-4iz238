@@ -3,7 +3,7 @@
     <renderers>
         <renderer mime="application/pdf">
             <fonts>
-                <font embed-url="./xslt/fonts/NotoSans.ttf">
+                <font embed-url="https://github.com/google/fonts/raw/main/ofl/notosans/NotoSans-Medium.ttf">
                     <font-triplet name="Noto Sans" style="normal" weight="normal"/>
                     <font-triplet name="Noto Sans" style="normal" weight="bold"/>
                 </font>
