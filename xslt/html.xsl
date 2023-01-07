@@ -56,95 +56,133 @@
                             </head>
                             <body>
                                 <a class="back-button" href="./index.html">Return back to the decks listings</a>
-
-                                <div class="deck deck--large deck--{lower-case(./colors/color/text())}">
-                                    <div class="deck-header">
-                                        <div class="deck-info">
-                                            <h1 class="deck-name">
-                                                <xsl:value-of select="./name"/>
-                                            </h1>
-                                            <h2 class="deck-format colored-text">
-                                                <xsl:value-of select="./format/text()"/>
-                                            </h2>
+                                
+                                <main class="deck-page">
+                                    <div class="deck deck--large deck--{lower-case(./colors/color/text())}">
+                                        <div class="deck-header">
+                                            <div class="deck-info">
+                                                <h1 class="deck-name">
+                                                    <xsl:value-of select="./name"/>
+                                                </h1>
+                                                <h2 class="deck-format colored-text">
+                                                    <xsl:value-of select="./format/text()"/>
+                                                </h2>
+                                            </div>
+                                            <div class="deck-colors">
+                                                <xsl:for-each select="./colors/color">
+                                                    <div class="mana mana--large mana--{lower-case(text())}"></div>
+                                                </xsl:for-each>
+                                            </div>
                                         </div>
-                                        <div class="deck-colors">
-                                            <xsl:for-each select="./colors/color">
-                                                <div class="mana mana--large mana--{lower-case(text())}"></div>
+                                        
+                                        <div class="deck-cards">
+                                            <xsl:for-each select="./cards/card">
+                                                <xsl:sort select="sum(./cost/*/text())"/>
+                                                <div class="deck-card">
+                                                    <div class="card-top">
+                                                        <div class="card-name">
+                                                            <span class="card-count colored-text">
+                                                                <xsl:value-of select="[@count]"/>x 
+                                                            </span>
+                                                            <xsl:value-of select="./name/text()"/>
+                                                            
+                                                        </div>
+                                                        <div class="card-cost">
+                                                            <xsl:if test="./cost/colorless/text() > 0">
+                                                                <div class="mana mana--colorless">
+                                                                    <xsl:value-of select="./cost/colorless/text()"/>
+                                                                </div>
+                                                            </xsl:if>
+                                                            
+                                                            <xsl:variable name="count" select="./cost/green/text()"/>
+                                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                                <div class="mana mana--green"/>
+                                                            </xsl:for-each>
+                                                            
+                                                            <xsl:variable name="count" select="./cost/red/text()"/>
+                                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                                <div class="mana mana--red"/>
+                                                            </xsl:for-each>
+                                                            
+                                                            <xsl:variable name="count" select="./cost/blue/text()"/>
+                                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                                <div class="mana mana--blue"/>
+                                                            </xsl:for-each>
+                                                            
+                                                            <xsl:variable name="count" select="./cost/black/text()"/>
+                                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                                <div class="mana mana--black"/>
+                                                            </xsl:for-each>
+                                                            
+                                                            <xsl:variable name="count" select="./cost/white/text()"/>
+                                                            <xsl:for-each select="(//*)[position()&lt;=$count]">
+                                                                <div class="mana mana--white"/>
+                                                            </xsl:for-each>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-details">
+                                                        <div class="card-information">
+                                                            <div class="card-subtype">
+                                                                <xsl:value-of select="./type/text()"/>
+                                                                <xsl:if test="./subtype/text()">
+                                                                    -    
+                                                                    <xsl:value-of select="./subtype/text()"/>
+                                                                </xsl:if>
+                                                            </div>
+                                                            <p class="card-text">
+                                                                <xsl:value-of select="./text/text()"/>
+                                                            </p>
+                                                            <xsl:if test="contains(./type/text(), 'Creature')">
+                                                                <div class="card-creature">
+                                                                    <xsl:value-of select="./power/text()"/> 
+                                                                    /
+                                                                    <xsl:value-of select="./toughness/text()"/>
+                                                                </div>
+                                                            </xsl:if>
+                                                        </div>
+                                                        <img class="card-image" src="{./images/art/text()}" alt="{./name/text()} image" title="{./artist/text()}"/>
+                                                    </div>
+                                                </div> 
                                             </xsl:for-each>
                                         </div>
                                     </div>
-
-                                    <div class="deck-cards">
-                                        <xsl:for-each select="./cards/card">
-                                            <xsl:sort select="sum(./cost/*/text())"/>
-                                            <div class="deck-card">
-                                                <div class="card-top">
-                                                    <div class="card-name">
-                                                        <span class="card-count colored-text">
-                                                            <xsl:value-of select="[@count]"/>x 
-                                                        </span>
-                                                        <xsl:value-of select="./name/text()"/>
-                                                        
-                                                    </div>
-                                                    <div class="card-cost">
-                                                        <xsl:if test="./cost/colorless/text() > 0">
-                                                            <div class="mana mana--colorless">
-                                                                <xsl:value-of select="./cost/colorless/text()"/>
-                                                            </div>
-                                                        </xsl:if>
-                                                        
-                                                        <xsl:variable name="count" select="./cost/green/text()"/>
-                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                            <div class="mana mana--green"/>
-                                                        </xsl:for-each>
-                                                        
-                                                        <xsl:variable name="count" select="./cost/red/text()"/>
-                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                            <div class="mana mana--red"/>
-                                                        </xsl:for-each>
-                                                        
-                                                        <xsl:variable name="count" select="./cost/blue/text()"/>
-                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                            <div class="mana mana--blue"/>
-                                                        </xsl:for-each>
-                                                        
-                                                        <xsl:variable name="count" select="./cost/black/text()"/>
-                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                            <div class="mana mana--black"/>
-                                                        </xsl:for-each>
-                                                        
-                                                        <xsl:variable name="count" select="./cost/white/text()"/>
-                                                        <xsl:for-each select="(//*)[position()&lt;=$count]">
-                                                            <div class="mana mana--white"/>
-                                                        </xsl:for-each>
-                                                    </div>
+                                    <aside class="deck-stats">
+                                        <xsl:variable name="total" select="sum(./stats/game/(wins|loses)/text())"/>
+                                        <xsl:variable name="wins" select="./stats/game/wins/text()"/>
+                                        <xsl:variable name="loses" select="./stats/game/loses/text()"/>
+                                        
+                                        <div class="deck-stat-title">Games played</div>
+                                        <div class="deck-stat">
+                                            <div class="deck-metric">
+                                                <div class="deck-metric-title">Total</div>
+                                                <div class="deck-metric-value">
+                                                    <xsl:value-of select="$total"/>
                                                 </div>
-                                                <div class="card-details">
-                                                    <div class="card-information">
-                                                        <div class="card-subtype">
-                                                            <xsl:value-of select="./type/text()"/>
-                                                            <xsl:if test="./subtype/text()">
-                                                                -    
-                                                                <xsl:value-of select="./subtype/text()"/>
-                                                            </xsl:if>
-                                                        </div>
-                                                        <p class="card-text">
-                                                            <xsl:value-of select="./text/text()"/>
-                                                        </p>
-                                                        <xsl:if test="contains(./type/text(), 'Creature')">
-                                                            <div class="card-creature">
-                                                                <xsl:value-of select="./power/text()"/> 
-                                                                /
-                                                                <xsl:value-of select="./toughness/text()"/>
-                                                            </div>
-                                                        </xsl:if>
-                                                    </div>
-                                                    <img class="card-image" src="{./images/art/text()}" alt="{./name/text()} image" title="{./artist/text()}"/>
+                                            </div>
+                                            
+                                            <div class="deck-metric">
+                                                <div class="deck-metric-title">Wins</div>
+                                                <div class="deck-metric-value">
+                                                    <xsl:value-of select="$wins"/>
                                                 </div>
-                                            </div> 
-                                        </xsl:for-each>
-                                    </div>
-                                </div>
+                                            </div>
+                                            
+                                            <div class="deck-metric">
+                                                <div class="deck-metric-title">Loses</div>
+                                                <div class="deck-metric-value">
+                                                    <xsl:value-of select="$loses"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="deck-stat">
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-item progress-bar-item--green" style="width: {($wins div $total) * 100}%"></div>
+                                                <div class="progress-bar-item" style="width: {($loses div $total) * 100}%"></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                </main>
                             </body>
                         </html> 
                     </xsl:result-document>

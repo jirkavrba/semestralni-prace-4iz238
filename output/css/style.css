@@ -25,6 +25,87 @@
     color: #ffffff;
 }
 
+.deck-page {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.deck-stats {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #a3a3a3;
+    border-radius: 0.5rem;
+    min-width: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck-stat-title {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.deck-stat {
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: stretch;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.deck-metric {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck-metric-title {
+    text-transform: uppercase; 
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #404040;
+}
+
+.deck-metric-value {
+    text-transform: uppercase; 
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.progress-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.progress-bar .progress-bar-item:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.progress-bar .progress-bar-item:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.progress-bar .progress-bar-item {
+    display: inline-block;
+    height: 10px;
+    background: #e5e5e5;
+}
+
+
+.progress-bar .progress-bar-item.progress-bar-item--green {
+    background: #22c55e;
+}
+
 .deck {
     text-decoration: none;
     display: inline-flex;
