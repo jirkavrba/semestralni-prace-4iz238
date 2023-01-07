@@ -75,6 +75,13 @@
                                             </div>
                                         </div>
                                         
+                                        <div class="deck-rarity">
+                                            <div class="deck-rarity--common" title="Common"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Common']/@count)"/> common</div>
+                                            <div class="deck-rarity--uncommon" title="Uncommon"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Uncommon']/@count)"/> uncommon</div>
+                                            <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Rare']/@count)"/> rare</div>
+                                            <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Mythic']/@count)"/> mythic</div>
+                                        </div>
+                                        
                                         <div class="deck-cards">
                                             <xsl:for-each select="./cards/card">
                                                 <xsl:sort select="sum(./cost/*/text())"/>
