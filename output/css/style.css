@@ -383,3 +383,16 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+.version-link {
+    display: block;
+    margin: 1rem;
+    font-family: monospace;
+    text-decoration: none;
+    color: inherit;
+}
+
+.version-link:hover {
+    color: #0000ff;
+    text-decoration: underline;
+}

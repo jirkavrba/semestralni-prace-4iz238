@@ -8,6 +8,8 @@
     
     <xsl:output method="html" version="5" indent="true"/>
     <xsl:output method="html" version="5" indent="true" name="html5" />
+
+    <xsl:param name="commit">dev</xsl:param>
     
     <xsl:template match="/" mode="#default">
         <html lang="en">
@@ -58,7 +60,7 @@
                                     <link rel="stylesheet" href="./css/style.css"/>
                                 </head>
                                 <body>
-                                    <a class="back-button" href="..">Return back to the decks listings</a>
+                                    <a class="back-button" href="./index.html">Return back to the decks listings</a>
                                     
                                     <main class="deck-page">
                                         <div class="deck deck--large deck--{lower-case(./colors/color[1]/text())}">
@@ -198,6 +200,8 @@
                         </xsl:result-document>
                     </xsl:for-each> 
                 </main>
+
+                <a class="version-link" href="https://gitlab.com/jirkavrba/semestralni-prace-4iz238/-/commit/{$commit}" target="_blank">Version <xsl:value-of select="$commit"/></a>
             </body>
         </html>
     </xsl:template>

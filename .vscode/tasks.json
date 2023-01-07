@@ -8,10 +8,16 @@
 			"xsltFile": "${workspaceFolder}/xslt/html.xsl",
 			"xmlSource": "${workspaceFolder}/decks.xml",
 			"resultPath": "${workspaceFolder}/output/index.html",
+			"parameters": [
+				{
+					"name": "commit",
+					"value": "vscode-dev"
+				}
+			],
 			"allowSyntaxExtensions40": "off",
 			"group": {
 				"kind": "build",
-				"isDefault": false
+				"isDefault": true
 			},
 			"problemMatcher": [
 				"$saxon-xslt"
@@ -31,7 +37,7 @@
 			],
 			"group": {
 				"kind": "build",
-				"isDefault": true
+				"isDefault": false
 			},
 		}
 	]
