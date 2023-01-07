@@ -30,7 +30,7 @@ transform-xml-to-html:
   script:
     - rm -f output/*.html
     - java -cp /opt/saxon/saxon-he-11.4.jar net.sf.saxon.Transform -xsl:xslt/html.xsl -s:decks.xml -o:output/index.html --allowSyntaxExtensions:off
-    - cp -R output /public 
+    - cp -R output public 
   artifacts:
     paths:
       - public
