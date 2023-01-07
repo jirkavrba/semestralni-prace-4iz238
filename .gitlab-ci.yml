@@ -36,6 +36,22 @@ transform-xml-to-html:
     expire_in: 1 hour
     paths:
       - output
+
+transform-xml-to-pdf:
+  stage: transform
+  image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
+  script:
+    - rm -f output/*.pdf
+    - fop -xml ./decks.xml -xsl ./xslt/pdf.xsl -pdf ./output/decks.pdf
+  only:
+    changes:
+      - output
+      - xslt/pdf.xsl
+      - decks.xml
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - output
     
 pages:
   stage: publish
