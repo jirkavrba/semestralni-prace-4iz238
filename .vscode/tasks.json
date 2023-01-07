@@ -24,7 +24,8 @@
 			"args": [
 				"-xml", "./decks.xml",
 				"-xsl", "./xslt/pdf.xsl",
-				"-pdf", "./output/decks.pdf"
+				"-pdf", "./output/decks.pdf",
+				"-param", "root", "/home/jirka/code/xml/xslt"
 			],
 			"group": {
 				"kind": "build",
