@@ -2,6 +2,7 @@ stages:
   - prepare
   # - validate
   - transform
+  - publish
 
 prepare-tooling-dockerfile:
   stage: prepare
@@ -20,7 +21,7 @@ prepare-tooling-dockerfile:
 #   stage: validate
 #   image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
 
-pages:
+transform-xml-to-html:
   stage: transform
   image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
   only:
@@ -31,7 +32,18 @@ pages:
   script:
     - rm -f output/*.html
     - java -cp /opt/saxon/saxon-he-11.4.jar net.sf.saxon.Transform -xsl:xslt/html.xsl -s:decks.xml -o:output/index.html --allowSyntaxExtensions:off
-    - cp -R output public
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - output
+    
+pages:
+  stage: publish
+  dependencies:
+    - transform
+  script:
+    - cp output public
   artifacts:
     paths:
       - public
+  
