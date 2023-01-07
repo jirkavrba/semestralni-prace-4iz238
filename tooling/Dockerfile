@@ -3,10 +3,15 @@
 # - Saxon HE for XSLT transformations
 # - XMLStarlet for validating the XML schema
 
-FROM klakegg/saxon
+FROM openjdk:21-slim-buster
 
-# Download the latest xmlstarlet apk
-RUN apk add xmlstarlet bash --update
+LABEL maintainer="vrbj04@vse.cz"
 
-# Remove the apk cache to keep the built docker image tiny
-RUN rm -rf /var/cache/apk/*
+RUN apt update
+RUN apt install -y unzip
+RUN apt install -y xmlstarlet
+
+ADD https://netix.dl.sourceforge.net/project/saxon/Saxon-HE/11/Java/SaxonHE11-4J.zip /tmp/saxon.zip
+
+RUN mkdir -p /opt/saxon
+RUN unzip -q /tmp/saxon.zip -d /opt/saxon

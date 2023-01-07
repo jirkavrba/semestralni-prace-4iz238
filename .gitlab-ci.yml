@@ -1,7 +1,7 @@
 stages:
   - prepare
   # - validate
-  # - transform
+  - transform
 
 prepare-tooling-dockerfile:
   stage: prepare
@@ -19,3 +19,14 @@ prepare-tooling-dockerfile:
 # validate-xml-schema:
 #   stage: validate
 #   image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
+
+transform-xml-to-html:
+  stage: transform
+  image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
+  only:
+    changes:
+      - decks.xml
+      - xslt/html.xsl
+  script:
+    - rm -f output/*.html
+    - xslt -s:decks.xml -xsl:xslt/html.xsl -o:output/index.html --allowSyntaxExtensions:off
