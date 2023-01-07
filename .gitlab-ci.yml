@@ -45,12 +45,6 @@ transform-xml-to-pdf:
     
 pages:
   stage: publish
-  only:
-    changes:
-      - output
-      - xslt/html.xsl
-      - xslt/pdf.xsl
-      - decks.xml
   needs:
     - transform-xml-to-html
     - transform-xml-to-pdf
