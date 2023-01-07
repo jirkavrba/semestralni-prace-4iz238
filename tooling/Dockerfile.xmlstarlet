@@ -1,0 +1,11 @@
+# Docker image to provide XMLStarlet tooling required in the CI/CD pipeline
+
+FROM alpine:latest
+
+# Download starlet apk
+RUN apk add xmlstarlet bash --update --repository http://dl-4.alpinelinux.org/alpine/edge/testing
+
+# Remove the apk cache to keep the built docker image tiny
+RUN rm -rf /var/cache/apk/*
+
+ENTRYPOINT ["xmlstarlet"]
