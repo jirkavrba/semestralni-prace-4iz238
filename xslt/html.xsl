@@ -16,7 +16,7 @@
             <head>
                 <title>Magic: The Gathering decks</title>
                 <meta name="og:title" content="Magic: The Gathering decks" />
-                <meta name="og:description" value="This page contains {count(/mtg:decks/deck)} decks"/>
+                <meta name="og:description" content="This page contains {count(/mtg:decks/deck)} decks"/>
                 <link rel="stylesheet" href="./css/style.css"/>
             </head>
             <body>
@@ -51,12 +51,12 @@
                         
                         <xsl:result-document href="deck-{./@id}.html">
                             <xsl:variable name="cards" select="sum(./cards/card/@count)"/>
-                            <html leng="en">
+                            <html lang="en">
                                 <head>
                                     <title><xsl:value-of select="./name/text()"/> | Magic: The Gathering decks</title>
-                                    <meta name="description" value="This deck contains {$cards} cards"/>
+                                    <meta name="description" content="This deck contains {$cards} cards"/>
                                     <meta name="og:title" content="{./name/text()} | Magic: The Gathering decks" />
-                                    <meta name="og:description" value="This deck contains {$cards} cards"/>
+                                    <meta name="og:description" content="This deck contains {$cards} cards"/>
                                     <link rel="stylesheet" href="./css/style.css"/>
                                 </head>
                                 <body>
