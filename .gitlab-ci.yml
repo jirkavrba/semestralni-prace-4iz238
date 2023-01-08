@@ -59,10 +59,12 @@ transform-xml-to-pdf:
 
 create-archive:
   stage: publish
+  image: alpine
   needs:
     - transform-xml-to-pdf
     - transform-xml-to-html
   script:
+    - apk add zip --update
     - mkdir -p result
     - mkdir -p result/output
     - cp -r ./output/css ./result/output/css
