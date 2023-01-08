@@ -66,9 +66,12 @@ create-archive:
   script:
     - apk add zip --update
     - mkdir -p result
-    - mkdir -p result/output
-    - cp -r ./output/css ./result/output/css
-    - cp -r ./output/img ./result/output/img
+    - mkdir -p result/html
+    - mkdir -p result/pdf
+    - cp ./output/*.html ./result/html
+    - cp ./output/decks.pdf ./result/pdf
+    - cp -r ./output/css ./result/html/css
+    - cp -r ./output/img ./result/html/img
     - cp -r ./xslt ./result
     - cp decks.xml ./result/decks.xml
     - cp decks.xsd ./result/decks.xsd
