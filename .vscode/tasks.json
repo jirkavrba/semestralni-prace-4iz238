@@ -28,17 +28,44 @@
 			"label": "XSLT: Transform decks.xml to PDF",
 			"command": "fop",
 			"args": [
-				"-xml", "./decks.xml",
-				"-xsl", "./xslt/pdf.xsl",
-				"-pdf", "./output/decks.pdf",
-				"-c", "./xslt/config/pdf.config.xml",
-				"-param", "root", "/home/jirka/code/xml/xslt",
+				"-xml", "${workspaceFolder}/decks.xml",
+				"-xsl", "${workspaceFolder}/xslt/pdf.xsl",
+				"-pdf", "${workspaceFolder}/output/decks.pdf",
+				"-c", "${workspaceFolder}/xslt/config/pdf.config.xml",
+				"-param", "root", "${workspaceFolder}/xslt",
 				"-param", "commit", "vscode-build"
 			],
 			"group": {
 				"kind": "build",
 				"isDefault": false
 			},
+		},
+		{
+			"type": "shell",
+			"label": "Validate decks.xml with XSD schema",
+			"command": "java",
+			"args": [
+				"-jar", "${workspaceFolder}/tooling/crux-1.3-all.jar",
+				"${workspaceFolder}/decks.xml"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": false
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Validate decks.xml with Schematron",
+			"command": "java",
+			"args": [
+				"-jar", "${workspaceFolder}/tooling/crux-1.3-all.jar",
+				"-s", "${workspaceFolder}/decks.sch",
+				"${workspaceFolder}/decks.xml"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": false
+			}
 		}
 	]
 }

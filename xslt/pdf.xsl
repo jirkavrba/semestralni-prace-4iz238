@@ -42,7 +42,6 @@
                         This export contains <xsl:value-of select="count(/mtg:decks/deck)"/> decks
                     </fo:block>
                     
-                    
                     <xsl:for-each select="/mtg:decks/deck">
                         <fo:block font-size="14pt">
                             <fo:basic-link internal-destination="deck-{./@id}">
