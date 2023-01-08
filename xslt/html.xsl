@@ -20,7 +20,7 @@
                 <link rel="stylesheet" href="./css/style.css"/>
             </head>
             <body>
-                <a class="back-button" href="./decks.pdf">PDF Export</a>
+                <a class="back-button" href="./decks.pdf?v={$commit}">PDF Export</a>
 
                 <main class="decks">
                     <xsl:for-each select="/mtg:decks/deck">
