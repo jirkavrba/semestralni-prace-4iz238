@@ -769,6 +769,40 @@
                 <artist>Wayne Reynolds</artist>
             </card>
 
+            <card count="4" id="d6bfa227-4309-40ed-952c-279595eab17e">
+                <name>Monastery Swiftspear</name>
+                <colors>
+                    <color>Red</color>
+                </colors>
+                <rarity>Uncommon</rarity>
+                <cost>
+                    <red>1</red>
+                </cost>
+                <type>Creature</type>
+                <images>
+                    <card>https://cards.scryfall.io/large/front/d/6/d6bfa227-4309-40ed-952c-279595eab17e.jpg?1670538620</card>
+                    <art>https://cards.scryfall.io/art_crop/front/d/6/d6bfa227-4309-40ed-952c-279595eab17e.jpg?1670538620</art>
+                </images>
+                <subtype>Human Monk</subtype>
+                <power>1</power>
+                <toughness>2</toughness>
+                <text>Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</text>
+                <set>bro</set>
+                <legality>
+                    <format>Historic</format>
+                    <format>Gladiator</format>
+                    <format>Pioneer</format>
+                    <format>Explorer</format>
+                    <format>Modern</format>
+                    <format>Legacy</format>
+                    <format>Vintage</format>
+                    <format>Commander</format>
+                    <format>Historicbrawl</format>
+                    <format>Duel</format>
+                </legality>
+                <artist>Gabor Szikszai</artist>
+            </card>
+
 
             <card count="4" id="0342b085-be20-475a-bc38-59b9cb6012e8">
                 <name>Goblin Chainwhirler</name>

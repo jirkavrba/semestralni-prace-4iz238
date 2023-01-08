@@ -5,9 +5,29 @@
     
             <sch:pattern>
                 <sch:title>Validate number of cards based on the deck format</sch:title>
-                <sch:rule context="//deck">
-                    <sch:assert test="./format/text() != 'Commander'">The format is not commander, where the limits are different</sch:assert>
-                    <sch:report test="sum(./cards/card/@count) &gt; 59">The number of cards must be at least 60</sch:report>
+
+                <!-- All formats require at least 60 cards -->
+                <sch:rule context="//deck[./format/text() != 'Commander']">
+                    <sch:assert test="sum(./cards/card/@count) &gt; 59">The number of cards must be at least 60</sch:assert>
+                </sch:rule>
+
+                <!-- Commander (EDH) requires at least 100 cards -->
+                <sch:rule context="//deck[./format/text() = 'Commander']">
+                    <sch:assert test="sum(./cards/card/@count) &gt; 99">The number of cards must be at least 99</sch:assert>
+                </sch:rule>
+            </sch:pattern>
+
+            <sch:pattern>
+                <sch:title>Validate number of unique cards based on the deck format</sch:title>
+
+                <!-- All formats at most 4 cards with the same name (except for basic lands) -->
+                <sch:rule context="//deck[./format/text() != 'Commander']/cards/card[type != 'Basic Land']">
+                    <sch:assert test="@count &lt; 5">The can be at most 4 cards with the same name.</sch:assert>
+                </sch:rule>
+
+                <!-- Commander (EDH) requires all 100 cards to be unique (except for basic lands) -->
+                <sch:rule context="//deck[./format/text() = 'Commander']/cards/card[type != 'Basic Land']">
+                    <sch:assert test="@count &lt; 2">Every card in the deck needs to be unique.</sch:assert>
                 </sch:rule>
             </sch:pattern>
     
