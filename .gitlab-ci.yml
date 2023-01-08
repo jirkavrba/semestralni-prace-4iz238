@@ -56,6 +56,28 @@ transform-xml-to-pdf:
     expire_in: 1 hour
     paths:
       - output
+
+create-archive:
+  stage: publish
+  needs:
+    - transform-xml-to-pdf
+    - transform-xml-to-html
+  script:
+    - mkdir -p result
+    - mkdir -p result/output
+    - cp -r ./output/css ./result/output/css
+    - cp -r ./output/img ./result/output/img
+    - cp -r ./xslt ./result
+    - cp decks.xml ./result/decks.xml
+    - cp decks.xsd ./result/decks.xsd
+    - cp decks.sch ./result/decks.sch
+    - cd vrbj04.zip
+    - zip vrbj04.zip -r ./*
+    - mv vrbj04.zip ..
+  artifacts:
+    expire_in: "1 month"
+    paths:
+      - vrbj04.zip
     
 pages:
   stage: publish
