@@ -9,10 +9,12 @@ LABEL maintainer="vrbj04@vse.cz"
 
 RUN apt update
 RUN apt install -y unzip
-RUN apt install -y xmlstarlet
 RUN apt install -y fop
 
-ADD https://netix.dl.sourceforge.net/project/saxon/Saxon-HE/11/Java/SaxonHE11-4J.zip /tmp/saxon.zip
-
 RUN mkdir -p /opt/saxon
+RUN mkdir -p /opt/crux
+
+ADD https://netix.dl.sourceforge.net/project/saxon/Saxon-HE/11/Java/SaxonHE11-4J.zip /tmp/saxon.zip
+ADD https://github.com/NCAR/crux/releases/download/v1.3/crux-1.3-all.jar /opt/crux/crux.jar
+
 RUN unzip -q /tmp/saxon.zip -d /opt/saxon

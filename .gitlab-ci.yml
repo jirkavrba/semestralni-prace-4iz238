@@ -21,9 +21,8 @@ validate-xml-schema:
   stage: validate
   image: "registry.gitlab.com/jirkavrba/semestralni-prace-4iz238/tooling:latest"
   script:
-    - xmlstarlet validate decks.xml # Validate source document
-    - xmlstarlet validate decks.xsd # Validate schema document
-    - xmlstarlet validate --xsd decks.xsd decks.xml # Validate the source documents against the schema
+    - java -jar /opt/crux/crux.jar decks.xml
+    # - java -jar /opt/crux/crux.jar decks.xml -s decks.sch
 
 transform-xml-to-html:
   stage: transform
