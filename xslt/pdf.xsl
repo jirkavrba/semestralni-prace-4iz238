@@ -37,12 +37,12 @@
                 <fo:flow flow-name="xsl-region-body">
                     <fo:block font-size="24pt" font-weight="bold">Magic: The Gathering decks</fo:block>
                     <fo:block font-size="20pt" font-family="Noto Sans" font-weight="bold" space-before="6pt" space-after="4pt">Jiří Vrba</fo:block>
-
+                    
                     <fo:block font-size="12pt" space-before="60pt" space-after="8pt" font-weight="bold">
                         This export contains <xsl:value-of select="count(/mtg:decks/deck)"/> decks
                     </fo:block>
-
-
+                    
+                    
                     <xsl:for-each select="/mtg:decks/deck">
                         <fo:block font-size="14pt">
                             <fo:basic-link internal-destination="deck-{position()}">
@@ -111,36 +111,36 @@
                                                 </xsl:if>
                                                 
                                                 <xsl:if test="./cost/colorless/text() > 0">
-                                                    <xsl:value-of select="./cost/colorless/text()"/>
+                                                    <xsl:value-of select="./cost/colorless/text()" />
                                                 </xsl:if>
                                                 
                                                 <xsl:variable name="green" select="./cost/green/text()"/>
                                                 <fo:inline>
                                                     <xsl:for-each select="(//*)[position()&lt;=$green]">
-                                                        <fo:external-graphic src="{$root}/img/g.png"/>
+                                                        <fo:external-graphic src="{$root}/img/g.png" content-height="scale-to-fit" height="12pt"  content-width="12pt" scaling="non-uniform"/>
                                                     </xsl:for-each>
                                                 </fo:inline>
                                                 
                                                 <xsl:variable name="red" select="./cost/red/text()"/>
                                                 <fo:inline>
                                                     <xsl:for-each select="(//*)[position()&lt;=$red]">
-                                                        <fo:external-graphic src="{$root}/img/r.png"/>
+                                                        <fo:external-graphic src="{$root}/img/r.png" content-height="scale-to-fit" height="12pt"  content-width="12pt" scaling="non-uniform"/>
                                                     </xsl:for-each>
                                                 </fo:inline>
                                                 
                                                 <xsl:variable name="blue" select="./cost/blue/text()"/>
                                                 <xsl:for-each select="(//*)[position()&lt;=$blue]">
-                                                    <fo:external-graphic src="{$root}/img/u.png"/>
+                                                    <fo:external-graphic src="{$root}/img/u.png" content-height="scale-to-fit" height="12pt"  content-width="12pt" scaling="non-uniform"/>
                                                 </xsl:for-each>
                                                 
                                                 <xsl:variable name="black" select="./cost/black/text()"/>
                                                 <xsl:for-each select="(//*)[position()&lt;=$black]">
-                                                    <fo:external-graphic src="{$root}/img/b.png"/>
+                                                    <fo:external-graphic src="{$root}/img/b.png" content-height="scale-to-fit" height="12pt"  content-width="12pt" scaling="non-uniform"/>
                                                 </xsl:for-each>
                                                 
                                                 <xsl:variable name="white" select="./cost/white/text()"/>
                                                 <xsl:for-each select="(//*)[position()&lt;=$white]">
-                                                    <fo:external-graphic src="{$root}/img/w.png"/>
+                                                    <fo:external-graphic src="{$root}/img/w.png" content-height="scale-to-fit" height="12pt"  content-width="12pt" scaling="non-uniform"/>
                                                 </xsl:for-each>
                                             </fo:block>
                                         </fo:table-cell>

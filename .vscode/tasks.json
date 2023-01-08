@@ -17,7 +17,7 @@
 			"allowSyntaxExtensions40": "off",
 			"group": {
 				"kind": "build",
-				"isDefault": true
+				"isDefault": false
 			},
 			"problemMatcher": [
 				"$saxon-xslt"
