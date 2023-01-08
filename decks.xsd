@@ -41,7 +41,9 @@
     <xs:simpleType name="powerToughnessType">
         <xs:union>
             <xs:simpleType>
-                <xs:restriction base="xs:integer"/>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                </xs:restriction>
             </xs:simpleType>
             <xs:simpleType>
                 <!-- Special cases for creatures with variable power/toughness -->
@@ -51,6 +53,12 @@
                 </xs:restriction>
             </xs:simpleType>
         </xs:union>
+    </xs:simpleType>
+
+    <xs:simpleType name="manaCostType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="setType">
@@ -81,12 +89,12 @@
     
     <xs:complexType name="costType">
         <xs:sequence>
-            <xs:element name="colorless" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="green" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="red" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="blue" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="black" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="white" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="colorless" type="manaCostType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="green" type="manaCostType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="red" type="manaCostType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="blue" type="manaCostType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="black" type="manaCostType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="white" type="manaCostType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
     
