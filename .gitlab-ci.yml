@@ -71,7 +71,7 @@ create-archive:
     - cp decks.xml ./result/decks.xml
     - cp decks.xsd ./result/decks.xsd
     - cp decks.sch ./result/decks.sch
-    - cd vrbj04.zip
+    - cd result
     - zip vrbj04.zip -r ./*
     - mv vrbj04.zip ..
   artifacts:
