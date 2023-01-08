@@ -24,7 +24,7 @@
 
                 <main class="decks">
                     <xsl:for-each select="/mtg:decks/deck">
-                        <a class="deck deck--{lower-case(./colors/color[1]/text())}" href="./deck-{position()}.html">
+                        <a class="deck deck--{lower-case(./colors/color[1]/text())}" href="./deck-{./@id}.html">
                             <div class="deck-header">
                                 <div class="deck-info">
                                     <h1 class="deck-name">
@@ -49,7 +49,7 @@
                             </div>
                         </a>
                         
-                        <xsl:result-document href="deck-{position()}.html">
+                        <xsl:result-document href="deck-{./@id}.html">
                             <xsl:variable name="cards" select="sum(./cards/card/@count)"/>
                             <html leng="en">
                                 <head>

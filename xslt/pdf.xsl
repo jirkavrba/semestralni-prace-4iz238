@@ -45,7 +45,7 @@
                     
                     <xsl:for-each select="/mtg:decks/deck">
                         <fo:block font-size="14pt">
-                            <fo:basic-link internal-destination="deck-{position()}">
+                            <fo:basic-link internal-destination="deck-{./@id}">
                                 <xsl:value-of select="./name/text()"/>
                             </fo:basic-link>
                         </fo:block>
@@ -62,7 +62,7 @@
                             Page <fo:page-number/>
                         </fo:block>
                     </fo:static-content>
-                    <fo:flow flow-name="xsl-region-body" id="deck-{position()}">
+                    <fo:flow flow-name="xsl-region-body" id="deck-{./@id}">
                         <fo:block text-align="left" space-before="20pt" space-after="14pt" font-family="sans-serif">
                             <fo:block font-size="24pt" font-weight="bold" space-before="6pt" space-after="4pt">
                                 <xsl:value-of select="./name/text()"/>

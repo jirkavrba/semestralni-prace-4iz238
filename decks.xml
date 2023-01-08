@@ -2,7 +2,7 @@
 <mtg:decks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://vrba.dev/mtg decks.xsd"
     xmlns:mtg="https://vrba.dev/mtg">
-    <deck>
+    <deck id="fa6b0fa2-c741-4736-8818-9bc8150fc578">
         <name>Emotional Damage</name>
         <format>Historic</format>
         <colors>
@@ -547,7 +547,7 @@
             </card>
         </cards>
     </deck>
-    <deck>
+    <deck id="b5d0fbd9-82d3-440c-9e97-10cf5af5c667">
         <name>Monored burn</name>
         <format>Historic</format>
         <colors>
