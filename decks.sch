@@ -30,5 +30,14 @@
                     <sch:assert test="@count &lt; 2">Every card in the deck needs to be unique.</sch:assert>
                 </sch:rule>
             </sch:pattern>
+
+            <sch:pattern>
+                <sch:title>The deck cannot contain cards that are illegal in the given format</sch:title>
+                <sch:rule context="//deck">
+                    <sch:report test="count(./cards/card[not(contains(./legalities/format, lower-case(./format)))]) &gt; 0">
+                        One or more cards are not legal in the deck format
+                    </sch:report>
+                </sch:rule>
+            </sch:pattern>
     
 </sch:schema>
