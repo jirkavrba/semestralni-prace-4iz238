@@ -8,12 +8,16 @@
 
                 <!-- All formats require at least 60 cards -->
                 <sch:rule context="//deck[./format/text() != 'Commander']">
-                    <sch:assert test="sum(./cards/card/@count) &gt; 59">The number of cards must be at least 60</sch:assert>
+                    <sch:assert test="sum(./cards/card/@count) &gt; 59">
+                        The number of cards in the deck "<sch:value-of select="./name/text()"/>" must be at least 60
+                    </sch:assert>
                 </sch:rule>
 
                 <!-- Commander (EDH) requires at least 100 cards -->
                 <sch:rule context="//deck[./format/text() = 'Commander']">
-                    <sch:assert test="sum(./cards/card/@count) &gt; 99">The number of cards must be at least 99</sch:assert>
+                    <sch:assert test="sum(./cards/card/@count) &gt; 99">
+                        The number of cards in the deck "<sch:value-of select="./name/text()"/>" must be at least 99
+                    </sch:assert>
                 </sch:rule>
             </sch:pattern>
 
@@ -22,12 +26,16 @@
 
                 <!-- All formats at most 4 cards with the same name (except for basic lands) -->
                 <sch:rule context="//deck[./format/text() != 'Commander']/cards/card[type != 'Basic Land']">
-                    <sch:assert test="@count &lt; 5">The can be at most 4 cards with the same name.</sch:assert>
+                    <sch:report test="@count &gt; 4">
+                        The card <sch:value-of select="./name/text()"/> is contained more than 4 times in the deck "<sch:value-of select="../../name/text()"/>".
+                    </sch:report>
                 </sch:rule>
 
                 <!-- Commander (EDH) requires all 100 cards to be unique (except for basic lands) -->
                 <sch:rule context="//deck[./format/text() = 'Commander']/cards/card[type != 'Basic Land']">
-                    <sch:assert test="@count &lt; 2">Every card in the deck needs to be unique.</sch:assert>
+                    <sch:report test="@count &gt; 1">
+                        The card <sch:value-of select="./name/text()"/> is contained more than once in the deck "<sch:value-of select="../../name/text()"/>".
+                    </sch:report>
                 </sch:rule>
             </sch:pattern>
 
