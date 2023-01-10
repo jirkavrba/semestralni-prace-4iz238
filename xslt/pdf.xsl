@@ -70,10 +70,10 @@
                                 <xsl:value-of select="./format/text()"/>
                             </fo:block>
                         </fo:block>
-                        <fo:table>
-                            <fo:table-column column-width="20mm"/>
-                            <fo:table-column/>
-                            <fo:table-column column-width="25mm"/>
+                        <fo:table table-layout="fixed" width="100%">
+                            <fo:table-column column-width="10%"/>
+                            <fo:table-column column-width="80%"/>
+                            <fo:table-column column-width="10%"/>
                             
                             <fo:table-header>
                                 <fo:table-row>
