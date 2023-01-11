@@ -116,7 +116,7 @@
 
 .decks {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
 }
 
 .deck {
@@ -125,12 +125,13 @@
     flex-flow: column nowrap;
     margin: 1rem;
     padding: 1rem;
-    width: 600px;
+    width: 400px;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     transition: 0.3s all;
     color: inherit;
     border: 2px solid #262626;
+    background-color: #f5f5f5;
 }
 
 .deck:not(.deck--large):hover {
@@ -167,13 +168,18 @@
     background: #fffbd5
 }
 
+.deck.deck--multicolor {
+    background: rgb(203,182,94);
+    background: linear-gradient(147deg, rgba(197,167,103,1) 0%, rgba(240,231,209,1) 48%, rgba(193,169,105,1) 100%); 
+}
+
 .deck.deck--green .colored-text {
     color: #16a34a;
 }
 
-.deck.deck--green .mana.mana--large {
-    background-color: #dcfce7 !important;
-    border-color: #dcfce7 !important;
+.deck .mana.mana--green.mana--large {
+    background-color: #16a34a !important;
+    border-color: #16a34a !important;
 }
 
 
@@ -181,36 +187,36 @@
     color: #3b82f6;
 }
 
-.deck.deck--blue .mana.mana--large {
-    background-color: #e0f2fe !important;
-    border-color: #e0f2fe !important;
+.deck .mana.mana--blue.mana--large {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important;
 }
 
 .deck.deck--black .colored-text {
     color: #292524;
 }
 
-.deck.deck--black .mana.mana--large{
-    background-color: #f5f5f5 !important;
-    border-color: #f5f5f5 !important;
+.deck .mana.mana--black.mana--large{
+    background-color: #292524 !important;
+    border-color: #292524 !important;
 }
 
 .deck.deck--red .colored-text {
     color: #dc2626;
 }
 
-.deck.deck--red .mana.mana--large {
-    background-color: #fee2e2 !important;
-    border-color: #fee2e2 !important;
+.deck .mana.mana--red.mana--large {
+    background-color: #dc2626 !important;
+    border-color: #dc2626 !important;
 }
 
 .deck.deck--white .colored-text {
     color: #fde68a;
 }
 
-.deck.deck--white .mana.mana--large {
-    background-color: #fffbd5 !important;
-    border-color: #fffbd5 !important;
+.deck .mana.mana--white.mana--large {
+    background-color: #fde68a !important;
+    border-color: #fde68a !important;
 }
 
 .deck .deck-header {
@@ -244,7 +250,12 @@
 }
 
 .deck .deck-header .deck-colors .mana:not(:first-child) {
+    transition: 0.3s all;
     margin-right: -1.5rem;
+}
+
+.deck.deck--large .deck-header .deck-colors:hover .mana:not(:first-child) {
+    margin-right: 0.25rem;
 }
 
 .deck .mana {
@@ -257,7 +268,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    border: 5px solid transparent;
+    border: 5px solid #f5f5f5;
 }
 
 .deck .mana.mana--green {
@@ -304,6 +315,7 @@
     font-weight: bold;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    border: 4px solid white;
 }
 
 .deck .deck-rarity .deck-rarity--common {

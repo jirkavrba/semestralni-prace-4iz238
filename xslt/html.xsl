@@ -23,34 +23,8 @@
                 
                 <main class="decks">
                     <xsl:for-each select="/mtg:decks/deck">
-                        <xsl:apply-templates select="."/>
-                        <a class="deck deck--{lower-case(./colors/color[1]/text())}" href="./deck-{./@id}.html">
-                            <div class="deck-header">
-                                <div class="deck-info">
-                                    <h1 class="deck-name">
-                                        <xsl:value-of select="./name"/>
-                                    </h1>
-                                    <h2 class="deck-format colored-text">
-                                        <xsl:value-of select="./format/text()"/>
-                                    </h2>
-                                </div>
-                                <div class="deck-colors">
-                                    <xsl:for-each select="./colors/color">
-                                        <div class="mana mana--large mana--{lower-case(text())}"></div>
-                                    </xsl:for-each>
-                                </div>
-                            </div>
-                            
-                            <div class="deck-rarity">
-                                <xsl:for-each-group select="./cards/card" group-by="rarity/text()">
-                                    <xsl:sort select="index-of(('Common', 'Uncommon', 'Rare', 'Mythic'), current-grouping-key()) "/>
-
-                                    <div class="deck-rarity--{lower-case(current-grouping-key())}" title="{current-grouping-key()}">
-                                        <xsl:value-of select="sum(current-group()/@count)"/>
-                                    </div>
-                                </xsl:for-each-group>
-                            </div>
-                        </a>
+                        <xsl:apply-templates select="." mode="link"/>
+                        <xsl:apply-templates select="." mode="page"/>
                     </xsl:for-each> 
                 </main>
                 
@@ -59,7 +33,39 @@
         </html>
     </xsl:template>
     
-    <xsl:template match="/mtg:decks/deck" mode="#default">
+    <xsl:template match="/mtg:decks/deck" mode="link">
+        <xsl:variable name="color" select="if (count(./colors/color) > 1) then 'deck--multicolor' else concat('deck--', lower-case(./colors/color[1]/text()))" /> 
+        <a class="deck {$color}" href="./deck-{./@id}.html">
+            <div class="deck-header">
+                <div class="deck-info">
+                    <h1 class="deck-name">
+                        <xsl:value-of select="./name/text()"/>
+                    </h1>
+                    <h2 class="deck-format colored-text">
+                        <xsl:value-of select="./format/text()"/>
+                    </h2>
+                </div>
+                <div class="deck-colors">
+                    <xsl:for-each select="./colors/color">
+                        <div class="mana mana--large mana--{lower-case(text())}"></div>
+                    </xsl:for-each>
+                </div>
+            </div>
+            
+            <div class="deck-rarity">
+                <xsl:for-each-group select="./cards/card" group-by="rarity/text()">
+                    <xsl:sort select="index-of(('Common', 'Uncommon', 'Rare', 'Mythic'), current-grouping-key()) "/>
+                    
+                    <div class="deck-rarity--{lower-case(current-grouping-key())}" title="{current-grouping-key()}">
+                        <xsl:value-of select="sum(current-group()/@count)"/>
+                    </div>
+                </xsl:for-each-group>
+            </div>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="/mtg:decks/deck" mode="page">
+        <xsl:variable name="color" select="if (count(./colors/color) > 1) then 'deck--multicolor' else concat('deck--', lower-case(./colors/color[1]/text()))" /> 
         <xsl:result-document href="deck-{./@id}.html">
             <xsl:variable name="cards" select="sum(./cards/card/@count)"/>
             <html lang="en">
@@ -74,7 +80,7 @@
                     <a class="back-button" href="./index.html">Return back to the decks listings</a>
                     
                     <main class="deck-page">
-                        <div class="deck deck--large deck--{lower-case(./colors/color[1]/text())}">
+                        <div class="deck deck--large {$color}">
                             <div class="deck-header">
                                 <div class="deck-info">
                                     <h1 class="deck-name">
@@ -94,7 +100,7 @@
                             <div class="deck-rarity">
                                 <xsl:for-each-group select="./cards/card" group-by="rarity/text()">
                                     <xsl:sort select="index-of(('Common', 'Uncommon', 'Rare', 'Mythic'), current-grouping-key()) "/>
-
+                                    
                                     <div class="deck-rarity--{lower-case(current-grouping-key())}" title="{current-grouping-key()}">
                                         <xsl:value-of select="concat(sum(current-group()/@count), '× ')"/> 
                                         <xsl:value-of select="lower-case(current-grouping-key())"/>
@@ -222,13 +228,13 @@
                             </div>
                         </aside>
                     </main>
-                    <script>
+                    <script><![CDATA[
                         (function () {
-                        document.querySelectorAll(".deck-card").forEach(card => {
-                        card.addEventListener("click", () => card.classList.toggle("deck-card--selected"));
-                        });
+                            document.querySelectorAll(".deck-card").forEach(card => {
+                                card.addEventListener("click", () => card.classList.toggle("deck-card--selected"));
+                            });
                         })();
-                    </script>
+                    ]]></script>
                 </body>
             </html> 
         </xsl:result-document>
