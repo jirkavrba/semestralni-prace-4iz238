@@ -42,10 +42,13 @@
                             </div>
                             
                             <div class="deck-rarity">
-                                <div class="deck-rarity--common" title="Common"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Common']/@count)"/></div>
-                                <div class="deck-rarity--uncommon" title="Uncommon"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Uncommon']/@count)"/></div>
-                                <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Rare']/@count)"/></div>
-                                <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Mythic']/@count)"/></div>
+                                <xsl:for-each-group select="./cards/card" group-by="rarity/text()">
+                                    <xsl:sort select="index-of(('Common', 'Uncommon', 'Rare', 'Mythic'), current-grouping-key()) "/>
+
+                                    <div class="deck-rarity--{lower-case(current-grouping-key())}" title="{current-grouping-key()}">
+                                        <xsl:value-of select="sum(current-group()/@count)"/>
+                                    </div>
+                                </xsl:for-each-group>
                             </div>
                         </a>
                     </xsl:for-each> 
@@ -89,10 +92,14 @@
                             </div>
                             
                             <div class="deck-rarity">
-                                <div class="deck-rarity--common" title="Common"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Common']/@count)"/> common</div>
-                                <div class="deck-rarity--uncommon" title="Uncommon"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Uncommon']/@count)"/> uncommon</div>
-                                <div class="deck-rarity--rare" title="Rare"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Rare']/@count)"/> rare</div>
-                                <div class="deck-rarity--mythic" title="Mythic"><xsl:value-of select="sum(./cards/card[rarity/text() = 'Mythic']/@count)"/> mythic</div>
+                                <xsl:for-each-group select="./cards/card" group-by="rarity/text()">
+                                    <xsl:sort select="index-of(('Common', 'Uncommon', 'Rare', 'Mythic'), current-grouping-key()) "/>
+
+                                    <div class="deck-rarity--{lower-case(current-grouping-key())}" title="{current-grouping-key()}">
+                                        <xsl:value-of select="concat(sum(current-group()/@count), '× ')"/> 
+                                        <xsl:value-of select="lower-case(current-grouping-key())"/>
+                                    </div>
+                                </xsl:for-each-group>
                             </div>
                             
                             <div class="deck-cards">
@@ -217,14 +224,14 @@
                     </main>
                     <script>
                         (function () {
-                            document.querySelectorAll(".deck-card").forEach(card => {
-                                card.addEventListener("click", () => card.classList.toggle("deck-card--selected"));
-                            });
+                        document.querySelectorAll(".deck-card").forEach(card => {
+                        card.addEventListener("click", () => card.classList.toggle("deck-card--selected"));
+                        });
                         })();
                     </script>
                 </body>
             </html> 
         </xsl:result-document>
     </xsl:template>
-
+    
 </xsl:stylesheet>
