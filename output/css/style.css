@@ -204,6 +204,15 @@
     text-transform: uppercase;
 }
 
+.deck .deck-header .deck-colors {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+
+.deck .deck-header .deck-colors .mana:not(:first-child) {
+    margin-right: -2rem;
+}
+
 .deck .mana {
     width: 1rem;
     height: 1rem;
