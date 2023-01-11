@@ -244,7 +244,7 @@
 }
 
 .deck .deck-header .deck-colors .mana:not(:first-child) {
-    margin-right: -2rem;
+    margin-right: -1.5rem;
 }
 
 .deck .mana {
