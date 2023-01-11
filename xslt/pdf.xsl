@@ -45,7 +45,10 @@
                     <xsl:for-each select="/mtg:decks/deck">
                         <fo:block font-size="14pt">
                             <fo:basic-link internal-destination="deck-{./@id}">
-                                <xsl:value-of select="./name/text()"/>
+                                <fo:page-number-citation ref-id="deck-{./@id}"/>:
+                                <fo:inline font-weight="bold">
+                                    <xsl:value-of select="./name/text()"/>
+                                </fo:inline>
                             </fo:basic-link>
                         </fo:block>
                     </xsl:for-each>
