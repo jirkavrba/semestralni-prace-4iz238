@@ -76,8 +76,8 @@
     
     <xs:complexType name="gameType">
         <xs:all>
-            <xs:element name="wins" type="xs:integer"/>
-            <xs:element name="loses" type="xs:integer"/>
+            <xs:element name="wins" type="xs:nonNegativeInteger"/>
+            <xs:element name="loses" type="xs:nonNegativeInteger"/>
         </xs:all>
     </xs:complexType>
     

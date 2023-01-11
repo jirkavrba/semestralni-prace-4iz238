@@ -197,8 +197,20 @@
                             
                             <div class="deck-stat">
                                 <div class="progress-bar">
-                                    <div class="progress-bar-item progress-bar-item--green" style="width: {($wins div $total) * 100}%"></div>
-                                    <div class="progress-bar-item" style="width: {($loses div $total) * 100}%"></div>
+                                    <xsl:variable name="winrate" select="round(($wins div $total) * 100)"/>
+                                    <xsl:variable name="loserate" select="round(100 - $winrate)"/>
+                                    <xsl:choose>
+                                        <xsl:when test="$winrate &lt; 25">
+                                            <div class="progress-bar-item progress-bar-item--red" style="width: {$winrate}%" title="{$winrate}%"></div>
+                                        </xsl:when>
+                                        <xsl:when test="$winrate &lt; 50">
+                                            <div class="progress-bar-item progress-bar-item--yellow" style="width: {$winrate}%" title="{$winrate}%"></div>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <div class="progress-bar-item progress-bar-item--green" style="width: {$winrate}%" title="{$winrate}%"></div>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                    <div class="progress-bar-item" style="width: {$loserate}%" title="{$loserate}%"></div>
                                 </div>
                             </div>
                         </aside>
