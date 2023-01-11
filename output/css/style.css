@@ -123,7 +123,7 @@
     text-decoration: none;
     display: inline-flex;
     flex-flow: column nowrap;
-    margin: 1rem 1rem 0 1rem;
+    margin: 1rem;
     padding: 1rem;
     width: 600px;
     border-radius: 0.5rem;
@@ -171,20 +171,45 @@
     color: #16a34a;
 }
 
+.deck.deck--green .mana {
+    background-color: #dcfce7 !important;
+    border-color: #dcfce7 !important;
+}
+
+
 .deck.deck--blue .colored-text {
     color: #3b82f6;
+}
+
+.deck.deck--blue .mana {
+    background-color: #e0f2fe !important;
+    border-color: #e0f2fe !important;
 }
 
 .deck.deck--black .colored-text {
     color: #292524;
 }
 
+.deck.deck--black {
+    background-color: #f5f5f5 !important;
+    border-color: #f5f5f5 !important;
+}
+
 .deck.deck--red .colored-text {
     color: #dc2626;
 }
 
+.deck.deck--red .mana {
+    background-color: #fee2e2 !important;
+    border-color: #fee2e2 !important;
+}
+
 .deck.deck--white .colored-text {
     color: #fde68a;
+}
+
+.deck.deck--white .mana {
+    border-color: #fffbd5 !important;
 }
 
 .deck .deck-header {
@@ -230,6 +255,8 @@
 .deck .mana.mana--large {
     width: 3rem;
     height: 3rem;
+    border-radius: 50%;
+    border: 5px solid transparent;
 }
 
 .deck .mana.mana--green {
