@@ -305,6 +305,10 @@
     background: #ffffff;
 }
 
+.deck .deck-cards .deck-card.deck-card--selected {
+    background: #eeeeee;
+}
+
 .deck .deck-cards .deck-card .card-top {
     display: flex;
     flex-flow: row nowrap;
@@ -356,7 +360,8 @@
     transition: 0.3s all;
 }
 
-.deck .deck-card:hover .card-details {
+.deck .deck-card:hover .card-details,
+.deck .deck-card.deck-card--selected .card-details {
     height: 200px;
     padding: 1rem 1rem 1rem 4rem;
 }

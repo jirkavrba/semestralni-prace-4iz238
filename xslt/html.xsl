@@ -215,6 +215,13 @@
                             </div>
                         </aside>
                     </main>
+                    <script>
+                        (function () {
+                            document.querySelectorAll(".deck-card").forEach(card => {
+                                card.addEventListener("click", () => card.classList.toggle("deck-card--selected"));
+                            });
+                        })();
+                    </script>
                 </body>
             </html> 
         </xsl:result-document>
