@@ -41,7 +41,7 @@
 
             <sch:pattern>
                 <sch:title>The deck cannot contain cards that are illegal in the given format</sch:title>
-                <sch:rule context="//deck/cards/card">
+                <sch:rule context="deck/cards/card">
                     <sch:let name="format" value="../../lower-case(./format/text())"/>
                     <sch:let name="card" value="./name/text()"/>
                     <sch:report test="empty(./legality/format[lower-case(text()) = $format])">

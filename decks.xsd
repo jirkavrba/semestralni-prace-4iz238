@@ -2,6 +2,7 @@
 <xs:schema
     xmlns="https://vrba.dev/mtg"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mtg="https://vrba.dev/mtg"
     targetNamespace="https://vrba.dev/mtg"
     elementFormDefault="unqualified"
     attributeFormDefault="unqualified"
